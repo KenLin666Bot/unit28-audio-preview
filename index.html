@@ -1,0 +1,1331 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Unit28有声预习" />
+  <title>Unit 28 加成聚合物与塑料 · 有声互动预习课 | Mastering Chemistry</title>
+  <style>
+    :root {
+      --bg-app: #f1f5f9;
+      --bg-card: #ffffff;
+      --bg-subtle: #f8fafc;
+      --text-main: #0f172a;
+      --text-sec: #334155;
+      --text-muted: #64748b;
+      --border: #e2e8f0;
+      --border-strong: #cbd5e1;
+
+      --primary: #7c3aed;
+      --primary-dark: #5b21b6;
+      --primary-soft: #f5f3ff;
+
+      --teal: #0d9488;
+      --teal-soft: #f0fdfa;
+      --amber: #d97706;
+      --amber-soft: #fffbeb;
+      --rose: #e11d48;
+      --rose-soft: #fff1f2;
+      --emerald: #059669;
+      --emerald-soft: #ecfdf5;
+
+      --radius-sm: 8px;
+      --radius-md: 12px;
+      --radius-lg: 16px;
+      --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.06);
+      --shadow-md: 0 8px 24px rgba(15, 23, 42, 0.08);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: var(--bg-app);
+      color: var(--text-main);
+      font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+      font-size: 15.5px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 108px;
+    }
+
+    .top-bar {
+      position: sticky;
+      top: 0;
+      z-index: 90;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 10px 22px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .brand-badge {
+      width: 40px;
+      height: 40px;
+      border-radius: 11px;
+      background: linear-gradient(135deg, #7c3aed, #4f46e5);
+      color: #fff;
+      font-weight: 800;
+      font-size: 15px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: var(--shadow-sm);
+      flex-shrink: 0;
+    }
+
+    .brand-title {
+      font-size: 16.5px;
+      font-weight: 800;
+      color: var(--text-main);
+      line-height: 1.25;
+    }
+
+    .brand-sub {
+      font-size: 12px;
+      color: var(--text-muted);
+    }
+
+    .top-actions {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      flex-wrap: wrap;
+    }
+
+    .pill-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 10px;
+      border-radius: 999px;
+      font-size: 12.2px;
+      font-weight: 600;
+      text-decoration: none;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-subtle);
+      color: var(--text-sec);
+      transition: all 0.15s;
+      cursor: pointer;
+    }
+
+    .pill-link:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .pill-link.primary-pill {
+      background: var(--primary-soft);
+      border-color: var(--border-strong);
+      color: var(--primary-dark);
+    }
+
+    .pill-link.active-unit-pill {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #ffffff;
+      cursor: default;
+      font-weight: 700;
+    }
+
+    .ep-strip-wrap {
+      max-width: 1440px;
+      margin: 14px auto 0;
+      padding: 0 18px;
+    }
+
+    .ep-strip {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(195px, 1fr));
+      gap: 10px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+    }
+
+    .ep-tab {
+      background: var(--bg-card);
+      border: 1.5px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: 10px 12px;
+      text-align: left;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 6px;
+      position: relative;
+    }
+
+    .ep-tab:hover {
+      border-color: var(--primary);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .ep-tab.active {
+      border-color: var(--primary);
+      background: linear-gradient(180deg, var(--primary-soft) 0%, #ffffff 100%);
+      box-shadow: 0 4px 14px rgba(15, 23, 42, 0.09);
+    }
+
+    .ep-tab-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .ep-done-dot {
+      font-size: 11px;
+      color: var(--emerald);
+      background: var(--emerald-soft);
+      padding: 1px 6px;
+      border-radius: 99px;
+      font-weight: 700;
+    }
+
+    .ep-tab-title {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--text-main);
+      line-height: 1.35;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .ep-tab-meta {
+      font-size: 11.5px;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .classroom-grid {
+      max-width: 1440px;
+      margin: 14px auto 24px;
+      padding: 0 18px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.34fr) minmax(360px, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    @media (max-width: 1060px) {
+      .classroom-grid { grid-template-columns: 1fr; }
+      .ep-strip { grid-template-columns: repeat(4, 235px); }
+    }
+
+    .blackboard-pane {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .ep-hero-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .ep-hero-kicker {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 4px;
+    }
+
+    .ep-hero-title {
+      margin: 0 0 4px;
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .ep-hero-en {
+      font-size: 13px;
+      color: var(--text-muted);
+      margin-bottom: 10px;
+    }
+
+    .ep-goal-box {
+      background: var(--bg-subtle);
+      border-left: 3.5px solid var(--primary);
+      padding: 8px 12px;
+      border-radius: 0 8px 8px 0;
+      font-size: 13.5px;
+      color: var(--text-sec);
+      margin-bottom: 10px;
+    }
+
+    .term-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .term-chip {
+      font-size: 12px;
+      background: #f1f5f9;
+      border: 1px solid #cbd5e1;
+      border-radius: 999px;
+      padding: 3px 10px;
+      color: #1e293b;
+    }
+
+    .term-chip b {
+      color: var(--primary-dark);
+      font-weight: 700;
+    }
+
+    .board-card {
+      background: var(--bg-card);
+      border: 2px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px 18px;
+      box-shadow: var(--shadow-sm);
+      transition: all 0.25s ease;
+      position: relative;
+    }
+
+    .board-card.is-active-board {
+      border-color: var(--primary);
+      box-shadow: 0 10px 28px rgba(15, 23, 42, 0.11);
+      background: #ffffff;
+    }
+
+    .board-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+
+    .board-tag-wrap {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .board-tag {
+      font-size: 12px;
+      font-weight: 700;
+      padding: 3px 9px;
+      border-radius: 6px;
+      background: #e2e8f0;
+      color: #334155;
+    }
+
+    .board-card.is-active-board .board-tag {
+      background: var(--primary);
+      color: #ffffff;
+    }
+
+    .live-pill {
+      display: none;
+      align-items: center;
+      gap: 5px;
+      font-size: 11.5px;
+      font-weight: 700;
+      color: var(--emerald);
+      background: var(--emerald-soft);
+      border: 1px solid #a7f3d0;
+      padding: 2px 8px;
+      border-radius: 999px;
+      animation: pulseGlow 1.8s infinite;
+    }
+
+    .board-card.is-active-board .live-pill {
+      display: inline-flex;
+    }
+
+    @keyframes pulseGlow {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.68; }
+    }
+
+    .board-jump-btn {
+      background: var(--primary-soft);
+      color: var(--primary-dark);
+      border: 1px solid var(--border-strong);
+      border-radius: 999px;
+      padding: 4px 11px;
+      font-size: 12px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .board-jump-btn:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .board-title {
+      margin: 0 0 12px;
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .board-grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    @media (max-width: 720px) {
+      .board-grid-2 { grid-template-columns: 1fr; }
+    }
+
+    .b-box {
+      border-radius: 10px;
+      padding: 12px 14px;
+      border: 1px solid var(--border);
+    }
+
+    .b-amber { background: #fffbeb; border-color: #fde68a; }
+    .b-blue  { background: #eff6ff; border-color: #bfdbfe; }
+    .b-rose  { background: #fff1f2; border-color: #fecdd3; }
+    .b-teal  { background: #f0fdfa; border-color: #99f6e4; }
+
+    .b-box-title {
+      font-size: 13.5px;
+      font-weight: 800;
+      margin-bottom: 8px;
+      color: #0f172a;
+    }
+
+    .b-eq {
+      background: #ffffff;
+      border: 1px solid rgba(15, 23, 42, 0.1);
+      border-radius: 8px;
+      padding: 8px 11px;
+      font-family: "SF Pro Text", -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      color: #0f172a;
+      margin-bottom: 7px;
+      overflow-x: auto;
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .b-points {
+      margin: 6px 0 0;
+      padding-left: 18px;
+      font-size: 13px;
+      color: var(--text-sec);
+    }
+
+    .b-points li { margin-bottom: 4px; }
+
+    .b-quote {
+      background: linear-gradient(90deg, var(--primary-soft), #f8fafc);
+      border-left: 4px solid var(--primary);
+      padding: 10px 14px;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 10px;
+    }
+
+    .b-quote-en {
+      font-size: 13.3px;
+      color: #1e3a8a;
+      margin-bottom: 5px;
+      line-height: 1.6;
+    }
+
+    .b-quote-zh {
+      font-size: 13px;
+      color: #0f172a;
+    }
+
+    .b-scheme {
+      background: #0f172a;
+      color: #f8fafc;
+      border-radius: 10px;
+      padding: 11px 14px;
+      overflow-x: auto;
+      margin-bottom: 8px;
+    }
+
+    .b-scheme pre {
+      margin: 0;
+      font-family: "SF Mono", "Menlo", "Monaco", "Consolas", monospace;
+      font-size: 12.5px;
+      line-height: 1.54;
+      color: #e2e8f0;
+    }
+
+    .b-mini-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12.8px;
+      background: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+
+    .b-mini-table th {
+      background: #f1f5f9;
+      color: #0f172a;
+      font-weight: 700;
+      text-align: left;
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+    }
+
+    .b-mini-table td {
+      padding: 8px 10px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+      color: var(--text-sec);
+    }
+
+    .b-note {
+      background: #fffbeb;
+      border: 1px solid #fde68a;
+      border-radius: 8px;
+      padding: 7px 11px;
+      font-size: 12.8px;
+      color: #92400e;
+    }
+
+    .b-tip-text {
+      margin: 0;
+      font-size: 13px;
+      color: var(--text-sec);
+    }
+
+    .board-svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 10px;
+    }
+
+    code {
+      font-family: "SF Mono", "Menlo", monospace;
+      font-size: 0.92em;
+      background: rgba(15, 23, 42, 0.06);
+      padding: 1px 5px;
+      border-radius: 4px;
+      color: #be123c;
+    }
+
+    .quiz-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 16px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .quiz-head {
+      font-size: 15.5px;
+      font-weight: 800;
+      margin: 0 0 12px;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .q-item {
+      border-top: 1px solid var(--border);
+      padding-top: 12px;
+      margin-top: 12px;
+    }
+
+    .q-item:first-of-type {
+      border-top: none;
+      padding-top: 0;
+      margin-top: 0;
+    }
+
+    .q-stem {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      color: var(--text-main);
+    }
+
+    .q-opts {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .q-opt-btn {
+      text-align: left;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-subtle);
+      font-size: 13.5px;
+      color: var(--text-sec);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .q-opt-btn:hover {
+      border-color: var(--primary);
+      background: var(--primary-soft);
+    }
+
+    .q-opt-btn.correct {
+      background: var(--emerald-soft);
+      border-color: var(--emerald);
+      color: #065f46;
+      font-weight: 700;
+    }
+
+    .q-opt-btn.wrong {
+      background: var(--rose-soft);
+      border-color: var(--rose);
+      color: #9f1239;
+    }
+
+    .q-exp {
+      display: none;
+      margin-top: 8px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: #f0fdf4;
+      border: 1px solid #bbf7d0;
+      font-size: 13px;
+      color: #166534;
+    }
+
+    /* Right Pane: Single-Teacher Structured Lecture Stream */
+    .transcript-pane {
+      background: var(--bg-card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      position: sticky;
+      top: 72px;
+      max-height: calc(100vh - 184px);
+    }
+
+    @media (max-width: 1060px) {
+      .transcript-pane {
+        position: static;
+        max-height: none;
+      }
+    }
+
+    .transcript-header {
+      padding: 12px 16px;
+      border-bottom: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+    }
+
+    .transcript-title {
+      font-size: 14.5px;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .auto-scroll-btn {
+      font-size: 12px;
+      font-weight: 600;
+      padding: 4px 10px;
+      border-radius: 999px;
+      border: 1px solid var(--border-strong);
+      background: var(--bg-subtle);
+      color: var(--text-sec);
+      cursor: pointer;
+    }
+
+    .auto-scroll-btn.on {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      color: var(--primary-dark);
+    }
+
+    .transcript-list {
+      padding: 14px;
+      overflow-y: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .turn-bubble {
+      border-radius: 12px;
+      padding: 11px 13px;
+      border: 1.5px solid #e2e8f0;
+      border-left-width: 4px;
+      background: #f8fafc;
+      cursor: pointer;
+      transition: all 0.18s ease;
+      position: relative;
+    }
+
+    .turn-bubble.role-concept { border-left-color: #4f46e5; }
+    .turn-bubble.role-example { border-left-color: #0d9488; background: #f8fdfa; }
+    .turn-bubble.role-trap    { border-left-color: #e11d48; background: #fff9fa; }
+    .turn-bubble.role-summary { border-left-color: #059669; background: #f6fef9; }
+
+    .turn-bubble:hover {
+      border-color: var(--primary);
+      transform: translateX(1px);
+    }
+
+    .turn-bubble.active-turn {
+      background: var(--primary-soft);
+      border-color: var(--primary);
+      border-left-width: 4.5px;
+      box-shadow: 0 4px 12px rgba(15, 23, 42, 0.1);
+    }
+
+    .turn-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 5px;
+      font-size: 12px;
+    }
+
+    .speaker-name {
+      font-weight: 800;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      color: var(--primary-dark);
+    }
+
+    .role-trap .speaker-name { color: #be123c; }
+    .role-example .speaker-name { color: #0f766e; }
+    .role-summary .speaker-name { color: #047857; }
+
+    .turn-time {
+      font-family: "SF Mono", "Menlo", monospace;
+      font-size: 11px;
+      color: var(--text-muted);
+      background: rgba(255, 255, 255, 0.9);
+      border: 1px solid #e2e8f0;
+      padding: 1px 6px;
+      border-radius: 4px;
+      flex-shrink: 0;
+    }
+
+    .turn-text {
+      font-size: 14px;
+      line-height: 1.64;
+      color: var(--text-main);
+    }
+
+    /* Sticky Bottom Audio Dock */
+    .audio-dock {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 120;
+      background: rgba(15, 23, 42, 0.96);
+      backdrop-filter: blur(14px);
+      color: #f8fafc;
+      border-top: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 10px 20px 12px;
+      box-shadow: 0 -8px 28px rgba(15, 23, 42, 0.25);
+    }
+
+    .dock-inner {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 7px;
+    }
+
+    .scrubber-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .time-lbl {
+      font-family: "SF Mono", "Menlo", monospace;
+      font-size: 12px;
+      color: #cbd5e1;
+      min-width: 44px;
+    }
+
+    .scrubber-wrap {
+      position: relative;
+      flex: 1;
+      display: flex;
+      align-items: center;
+    }
+
+    #seek-slider {
+      width: 100%;
+      accent-color: #818cf8;
+      cursor: pointer;
+      height: 6px;
+    }
+
+    .controls-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .ctrl-left, .ctrl-center, .ctrl-right {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .now-playing-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #e2e8f0;
+      max-width: 360px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .dock-btn {
+      background: rgba(255, 255, 255, 0.1);
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      border-radius: 8px;
+      padding: 5px 11px;
+      font-size: 12.5px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+
+    .dock-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .play-main-btn {
+      background: #818cf8;
+      color: #0f172a;
+      border: none;
+      border-radius: 999px;
+      padding: 7px 20px;
+      font-size: 14px;
+      font-weight: 800;
+      cursor: pointer;
+      box-shadow: 0 2px 10px rgba(129, 140, 248, 0.4);
+    }
+
+    .play-main-btn:hover {
+      background: #a5b4fc;
+    }
+
+    .speed-select {
+      background: rgba(255, 255, 255, 0.12);
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 8px;
+      padding: 5px 8px;
+      font-size: 12.5px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+
+    .speed-select option {
+      color: #0f172a;
+      background: #ffffff;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="top-bar">
+    <div class="brand">
+      <div class="brand-badge">U28</div>
+      <div>
+        <div class="brand-title">Unit 28 加成聚合物与塑料 · 双语有声互动预习课</div>
+        <div class="brand-sub">HKDSE 精工版《Mastering Chemistry》Book 3A · Topic 7 · 陈老师沉稳主讲 + 动态声画同步黑板</div>
+      </div>
+    </div>
+    <div class="top-actions">
+      <a class="pill-link primary-pill" id="download-merged-link" href="#" download>📥 下载完整连听版 MP3 (<span id="total-dur-badge"></span>)</a>
+      <a class="pill-link" id="download-ep-link" href="#" download>🎵 下载本讲 MP3</a>
+      <a class="pill-link" id="handout-md-link" href="./Unit28_双语课堂讲义与逐字稿.md" target="_blank">📄 双语讲义逐字稿</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit25-audio-preview/" href="../Unit25_有声互动预习课/Unit25_有声互动预习课.html" title="Unit 25 化石燃料">U25</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit26-audio-preview/" href="../Unit26_有声互动预习课/Unit26_有声互动预习课.html" title="Unit 26 同系物、结构式及碳化合物的命名">U26</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit27-audio-preview/" href="../Unit27_有声互动预习课/Unit27_有声互动预习课.html" title="Unit 27 烷烃与烯烃">U27</a>
+      <span class="pill-link active-unit-pill" title="当前单元：Unit 28 加成聚合物与塑料">🎧 U28</span>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit29-audio-preview/" href="../Unit29_有声互动预习课/Unit29_有声互动预习课.html" title="Unit 29 碳化合物的命名及物理性质">U29</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit30-audio-preview/" href="../Unit30_有声互动预习课/Unit30_有声互动预习课.html" title="Unit 30 同分异构现象">U30</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit31-audio-preview/" href="../Unit31_有声互动预习课/Unit31_有声互动预习课.html" title="Unit 31 各官能团的典型反应">U31</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit32-audio-preview/" href="../Unit32_有声互动预习课/Unit32_有声互动预习课.html" title="Unit 32 碳化合物的合成">U32</a>
+      <a class="pill-link unit-jump-link" data-gh="https://kenlin666bot.github.io/unit33-audio-preview/" href="../Unit33_有声互动预习课/Unit33_有声互动预习课.html" title="Unit 33 重要的有机物质">U33</a>
+      <a class="pill-link" id="companion-site-link" href="../Mastering_Chemistry_Topic7_8_学习站.html">📖 Topic 7 &amp; 8 闯关站</a>
+    </div>
+  </header>
+
+  <section class="ep-strip-wrap" aria-label="微课章节选择">
+    <div class="ep-strip" id="ep-strip"></div>
+  </section>
+
+  <main class="classroom-grid">
+    <!-- Left Synchronized Blackboard -->
+    <div class="blackboard-pane">
+      <div class="ep-hero-card" id="ep-hero"></div>
+      <div id="boards-container" style="display:flex; flex-direction:column; gap:14px;"></div>
+      <div class="quiz-card" id="quiz-container"></div>
+    </div>
+
+    <!-- Right Structured Lecture Stream -->
+    <aside class="transcript-pane" aria-label="课堂主讲逐字稿">
+      <div class="transcript-header">
+        <div class="transcript-title">🎙️ 陈老师双语精讲逐字稿（点击任意段跳读）</div>
+        <button class="auto-scroll-btn on" id="auto-scroll-toggle">🎯 自动跟随：开</button>
+      </div>
+      <div class="transcript-list" id="transcript-list"></div>
+    </aside>
+  </main>
+
+  <!-- Sticky Bottom Audio Player -->
+  <footer class="audio-dock">
+    <audio id="classroom-audio" preload="metadata"></audio>
+    <div class="dock-inner">
+      <div class="scrubber-row">
+        <span class="time-lbl" id="cur-time">00:00</span>
+        <div class="scrubber-wrap">
+          <input type="range" id="seek-slider" min="0" max="100" step="0.1" value="0" aria-label="播放进度" />
+        </div>
+        <span class="time-lbl" id="dur-time">00:00</span>
+      </div>
+      <div class="controls-row">
+        <div class="ctrl-left">
+          <span class="now-playing-label" id="dock-ep-label">正在加载...</span>
+        </div>
+        <div class="ctrl-center">
+          <button class="dock-btn" id="prev-ep-btn" title="上一讲">⏮ 上一讲</button>
+          <button class="dock-btn" id="rew-btn" title="后退 10 秒">⏪ -10s</button>
+          <button class="play-main-btn" id="play-btn">▶ 开始听课</button>
+          <button class="dock-btn" id="fwd-btn" title="前进 10 秒">+10s ⏩</button>
+          <button class="dock-btn" id="next-ep-btn" title="下一讲">下一讲 ⏭</button>
+        </div>
+        <div class="ctrl-right">
+          <label for="speed-select" style="font-size:12px;color:#cbd5e1;">语速</label>
+          <select class="speed-select" id="speed-select">
+            <option value="0.85">0.85x 慢速细听</option>
+            <option value="1" selected>1.0x 标准课堂</option>
+            <option value="1.15">1.15x 轻快预习</option>
+            <option value="1.25">1.25x 高效复习</option>
+            <option value="1.5">1.5x 考前速刷</option>
+          </select>
+          <button class="dock-btn" id="autoplay-btn">🔁 连播：开</button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    window.COURSE_DATA = {"totalDuration": 1465.73, "mergedAudioFile": "audio/00_Unit28_加成聚合物与塑料_完整连听版.mp3", "episodes": [{"id": "ep1", "epNum": "第 1 讲", "code": "28.1 – 28.4", "fileSlug": "01_28.1-28.4_热塑性塑料微观原理与加聚重复单位书写铁律", "titleZh": "热塑性塑料（Thermoplastics）受热软化原理与加成聚合重复单位满分画法", "titleEn": "Thermoplastics, Addition Polymerization & Drawing Repeating Units", "goal": "打通石油石脑油（naphtha）裂化制备合成塑料的工业链路，吃透热塑性塑料（thermoplastics）受热软化与无固定熔点的微观原因，零失误掌握“H 字排布法”画重复单位（repeating unit，两端开口且严禁写下标 n！）与“主链两碳切片法”反推单体系统命名。", "keyTerms": [{"en": "thermoplastic", "zh": "热塑性塑料"}, {"en": "van der Waals' forces", "zh": "范德华力（链间弱引力）"}, {"en": "addition polymerization", "zh": "加成聚合反应"}, {"en": "monomer / polymer", "zh": "单体 / 聚合物"}, {"en": "repeating unit", "zh": "重复单位（禁写下标 n）"}, {"en": "copolymer", "zh": "共聚物（两种或以上单体）"}], "boards": [{"id": "b1_1", "tag": "板书 1 · 塑料来源与热塑性本质 (28.1–28.2)", "title": "从石脑油到合成塑料：为什么所有加成聚合物都是无尖锐熔点的热塑性塑料？", "html": "\n                <div class=\"b-quote\">\n                  <div class=\"b-quote-en\"><strong>Petrochemical Route（石化制塑全链路）</strong>：Petroleum 原油分馏 ⟶ <strong>naphtha（石脑油）</strong> ⟶ <strong>cracking（裂化）</strong> ⟶ <strong>alkene monomers（不饱和烯烃单体）</strong> ⟶ <strong>addition polymers（加成聚合物）</strong> + 助剂 ⟶ <strong>plastics（塑料）</strong></div>\n                  <div class=\"b-quote-zh\">💡 <strong>塑料通用优势</strong>：质轻（<code>lightweight</code>）、耐酸碱抗腐蚀（<code>corrosion-resistant / unreactive</code>）、优良电与热绝缘体（<code>good electrical &amp; thermal insulators</code>）、易塑形染色且大批量成本低。</div>\n                </div>\n                <div class=\"board-grid-2\">\n                  <div class=\"b-box b-blue\">\n                    <div class=\"b-box-title\">① 为何所有加成聚合物皆为 <code>Thermoplastics</code>？</div>\n                    <ul class=\"b-points\">\n                      <li><strong>微观结构</strong>：由许多<strong>独立长聚合物链（<code>separate long polymer chains</code>）</strong>组成；链内为牢固共价键，但<strong>链与链之间绝无共价交联键（<code>NO covalent cross-links</code>）</strong>，仅靠微弱的分子间<strong>范德华力（<code>weak intermolecular van der Waals' forces</code>）</strong>吸引。</li>\n                      <li><strong>受热行为</strong>：加热时克服微弱范德华力，分子链容易<strong>互相滑移（<code>slide past one another</code>）</strong> ➔ 受热软化熔融、冷却硬化，可反复重塑（<code>can be remoulded</code>）。</li>\n                    </ul>\n                  </div>\n                  <div class=\"b-box b-amber\">\n                    <div class=\"b-box-title\">② 高频 1 分题：为何在一段温度范围内软化？</div>\n                    <ul class=\"b-points\">\n                      <li>聚合物<strong>没有固定的相对分子质量</strong>，也<strong>没有尖锐熔点（<code>no sharp melting point</code>）</strong>。</li>\n                      <li><strong>满分采分句</strong>：一份聚合物样品是由<strong>不同链长的大分子组成的混合物（<code>a mixture of polymeric molecules with different chain lengths</code>）</strong>，克服不同链长分子间范德华力所需温度不同，故在一段温度范围内逐渐软化（<code>softens over a range of temperatures</code>）。</li>\n                    </ul>\n                  </div>\n                </div>\n                ", "start": 0.25, "end": 87.422}, {"id": "b1_2", "tag": "板书 2 · H 字排布法与重复单位红线 (28.3–28.4)", "title": "“H 字排布法”秒杀烯烃加聚：单体、聚合物与重复单位（Repeating Unit）生死红线", "html": "\n<svg class=\"board-svg\" viewBox=\"0 0 780 235\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"丁-2-烯 H 字排布法：单体、聚合物与重复单位对比图\">\n  <defs>\n    <linearGradient id=\"u28GradH\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#f8fafc\"/>\n      <stop offset=\"100%\" stop-color=\"#f5f3ff\"/>\n    </linearGradient>\n  </defs>\n  <rect x=\"0\" y=\"0\" width=\"780\" height=\"235\" rx=\"12\" fill=\"url(#u28GradH)\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>\n  <text x=\"390\" y=\"24\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#4c1d95\">“H 字排布法”满分示范：以 but-2-ene (CH₃CH=CHCH₃) 为例，死守主链仅 2 碳与有无 n 红线！</text>\n\n  <!-- Card 1: Monomer -->\n  <rect x=\"14\" y=\"36\" width=\"232\" height=\"186\" rx=\"10\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.5\"/>\n  <rect x=\"14\" y=\"36\" width=\"232\" height=\"28\" rx=\"10\" fill=\"#dbeafe\"/>\n  <text x=\"130\" y=\"55\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"800\" fill=\"#1d4ed8\">① Monomer 单体 (but-2-ene)</text>\n  <text x=\"48\" y=\"124\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"15\" font-weight=\"800\" fill=\"#1d4ed8\">n</text>\n  <text x=\"98\" y=\"86\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"700\" fill=\"#334155\">CH₃</text>\n  <text x=\"98\" y=\"103\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" fill=\"#64748b\">│</text>\n  <text x=\"98\" y=\"123\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"14\" font-weight=\"800\" fill=\"#0f172a\">C</text>\n  <text x=\"98\" y=\"142\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" fill=\"#64748b\">│</text>\n  <text x=\"98\" y=\"159\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"700\" fill=\"#475569\">H</text>\n  <line x1=\"112\" y1=\"116\" x2=\"152\" y2=\"116\" stroke=\"#7c3aed\" stroke-width=\"2.4\"/>\n  <line x1=\"112\" y1=\"122\" x2=\"152\" y2=\"122\" stroke=\"#7c3aed\" stroke-width=\"2.4\"/>\n  <text x=\"166\" y=\"86\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"700\" fill=\"#334155\">CH₃</text>\n  <text x=\"166\" y=\"103\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" fill=\"#64748b\">│</text>\n  <text x=\"166\" y=\"123\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"14\" font-weight=\"800\" fill=\"#0f172a\">C</text>\n  <text x=\"166\" y=\"142\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" fill=\"#64748b\">│</text>\n  <text x=\"166\" y=\"159\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"700\" fill=\"#475569\">H</text>\n  <text x=\"130\" y=\"186\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1e3a8a\">双键 2 个碳居中横放，4 个基团</text>\n  <text x=\"130\" y=\"204\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#475569\">上下竖挂成“H 字形”（不饱和 C=C）</text>\n\n  <!-- Reaction Arrow -->\n  <text x=\"258\" y=\"125\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"800\" fill=\"#6d28d9\">⟶</text>\n\n  <!-- Card 2: Polymer -->\n  <rect x=\"270\" y=\"36\" width=\"242\" height=\"186\" rx=\"10\" fill=\"#ffffff\" stroke=\"#c4b5fd\" stroke-width=\"1.5\"/>\n  <rect x=\"270\" y=\"36\" width=\"242\" height=\"28\" rx=\"10\" fill=\"#ede9fe\"/>\n  <text x=\"391\" y=\"55\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"800\" fill=\"#5b21b6\">② Polymer 聚合物（方括号 + 下标 n）</text>\n  <line x1=\"292\" y1=\"119\" x2=\"338\" y2=\"119\" stroke=\"#dc2626\" stroke-width=\"2.3\"/>\n  <path d=\"M 322 76 L 314 76 L 314 162 L 322 162\" fill=\"none\" stroke=\"#4f46e5\" stroke-width=\"2\"/>\n  <text x=\"354\" y=\"86\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"700\" fill=\"#334155\">CH₃</text>\n  <text x=\"354\" y=\"103\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" fill=\"#64748b\">│</text>\n  <text x=\"354\" y=\"123\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"14\" font-weight=\"800\" fill=\"#0f172a\">C</text>\n  <text x=\"354\" y=\"142\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" fill=\"#64748b\">│</text>\n  <text x=\"354\" y=\"159\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"700\" fill=\"#475569\">H</text>\n  <line x1=\"368\" y1=\"119\" x2=\"408\" y2=\"119\" stroke=\"#0f172a\" stroke-width=\"2.2\"/>\n  <text x=\"422\" y=\"86\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"700\" fill=\"#334155\">CH₃</text>\n  <text x=\"422\" y=\"103\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" fill=\"#64748b\">│</text>\n  <text x=\"422\" y=\"123\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"14\" font-weight=\"800\" fill=\"#0f172a\">C</text>\n  <text x=\"422\" y=\"142\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" fill=\"#64748b\">│</text>\n  <text x=\"422\" y=\"159\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"700\" fill=\"#475569\">H</text>\n  <path d=\"M 454 76 L 462 76 L 462 162 L 454 162\" fill=\"none\" stroke=\"#4f46e5\" stroke-width=\"2\"/>\n  <line x1=\"438\" y1=\"119\" x2=\"486\" y2=\"119\" stroke=\"#dc2626\" stroke-width=\"2.3\"/>\n  <text x=\"476\" y=\"168\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"13.5\" font-weight=\"800\" fill=\"#4f46e5\">n</text>\n  <text x=\"391\" y=\"186\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#5b21b6\">C=C 打开变饱和 C—C（不使 Br₂ 褪色）</text>\n  <text x=\"391\" y=\"204\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#475569\">延伸键穿出方括号 + 右下角必写 n</text>\n\n  <!-- Card 3: Repeating Unit -->\n  <rect x=\"526\" y=\"36\" width=\"240\" height=\"186\" rx=\"10\" fill=\"#ffffff\" stroke=\"#fda4af\" stroke-width=\"1.5\"/>\n  <rect x=\"526\" y=\"36\" width=\"240\" height=\"28\" rx=\"10\" fill=\"#ffe4e6\"/>\n  <text x=\"646\" y=\"55\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"800\" fill=\"#be123c\">③ Repeating unit 重复单位（必考！）</text>\n  <line x1=\"556\" y1=\"119\" x2=\"600\" y2=\"119\" stroke=\"#dc2626\" stroke-width=\"2.6\"/>\n  <text x=\"614\" y=\"86\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"700\" fill=\"#334155\">CH₃</text>\n  <text x=\"614\" y=\"103\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" fill=\"#64748b\">│</text>\n  <text x=\"614\" y=\"123\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"14\" font-weight=\"800\" fill=\"#0f172a\">C</text>\n  <text x=\"614\" y=\"142\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" fill=\"#64748b\">│</text>\n  <text x=\"614\" y=\"159\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"700\" fill=\"#475569\">H</text>\n  <line x1=\"628\" y1=\"119\" x2=\"668\" y2=\"119\" stroke=\"#0f172a\" stroke-width=\"2.2\"/>\n  <text x=\"682\" y=\"86\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"700\" fill=\"#334155\">CH₃</text>\n  <text x=\"682\" y=\"103\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" fill=\"#64748b\">│</text>\n  <text x=\"682\" y=\"123\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"14\" font-weight=\"800\" fill=\"#0f172a\">C</text>\n  <text x=\"682\" y=\"142\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12\" fill=\"#64748b\">│</text>\n  <text x=\"682\" y=\"159\" text-anchor=\"middle\" font-family=\"SF Mono, Menlo, monospace\" font-size=\"12.5\" font-weight=\"700\" fill=\"#475569\">H</text>\n  <line x1=\"696\" y1=\"119\" x2=\"740\" y2=\"119\" stroke=\"#dc2626\" stroke-width=\"2.6\"/>\n  <rect x=\"538\" y=\"171\" width=\"216\" height=\"42\" rx=\"6\" fill=\"#fef2f2\" stroke=\"#ef4444\" stroke-width=\"1.2\"/>\n  <text x=\"646\" y=\"187\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"800\" fill=\"#dc2626\">★ 左右两端必画开口延伸键 —</text>\n  <text x=\"646\" y=\"205\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"800\" fill=\"#b91c1c\">❌ 严禁写方括号与下标 n（写 n 零分！）</text>\n</svg>\n\n                <div class=\"b-note\" style=\"margin-top:9px;\">\n                  📌 <strong>三大必考铁律</strong>：① 加成聚合<strong>不脱去任何小分子（<code>without losing any small molecules</code>）</strong>，聚合物与单体实验式相同；② 每个重复单位的水平主链<strong>永远只有 2 个碳原子</strong>；③ 聚合后 <code>C=C</code> 已全部变为饱和 <code>C—C</code> 单键，故加成聚合物<strong>不能使 <code>Br₂</code>（有机溶剂）或酸化 <code>KMnO₄</code> 褪色</strong>！\n                </div>\n                ", "start": 88.042, "end": 226.194}, {"id": "b1_3", "tag": "板书 3 · 主链两碳切片法反推单体 (28.4)", "title": "逆向破译未知聚合物：“主链两碳切片法”还原单体 IUPAC 名称与共聚物识别", "html": "\n                <div class=\"b-scheme\">\n<pre>【主链两碳切片法】沿水平连续碳主链每 2 个碳切一刀 ➔ 擦去两端延伸单键 ➔ 中间 C—C 恢复成 C=C 双键！\n\n① 含卤素与支链聚合物： —CH(CH₃)—CHCl—CH(CH₃)—CHCl—\n   · 切前 2 个主链碳恢复双键： CH₃—CH=CH—Cl （⚠️ 最长含双键碳链共 3 个碳，绝不是 2 碳乙烯！）\n   · 从靠近 Cl 的双键端碳编 1 号位 ══▶ 单体系统命名：1-chloroprop-1-ene\n\n② 含乙基侧链聚合物：   —CH₂—CH(CH₂CH₃)—CH₂—CH(CH₂CH₃)—\n   · 切前 2 个主链碳恢复双键： CH₂=CH—CH₂CH₃ （最长含双键碳链共 4 个碳！）\n   ══▶ 单体系统命名：but-1-ene\n\n③ 交替共聚物（Copolymer，由两种不同单体共聚而成）： —CH₂—CH₂—CH(CH₃)—CH₂—\n   · 第 1 刀切出 CH₂=CH₂（ethene） + 第 2 刀切出 CH(CH₃)=CH₂（propene） ══▶ 完整重复单位跨越 4 个主链碳！</pre>\n                </div>\n                <div class=\"b-note\">💡 <strong>防坑口诀</strong>：正向画图把支链竖挂在 2 碳主链上下；逆向命名务必把竖挂的甲基、乙基<strong>重新拉直并入最长含双键主链</strong>再数碳数！</div>\n                ", "start": 226.814, "end": 360.43}], "turns": [{"speaker": "teacher", "role": "concept", "stepTag": "🎯 单元导学 · 从石脑油裂化到塑料王国", "boardId": "b1_1", "displayHtml": "同学们好，欢迎来到精工版《Mastering Chemistry》Book 3A · Topic 7 收官单元——<strong>Unit 28：<em>Addition polymers</em>（加成聚合物与塑料）</strong>。请看<strong>第 1 张板书</strong>顶部路线：原油分馏出石脑油（<code>naphtha</code>），经裂化（<code>cracking</code>）制得不饱和烯烃单体（<code>alkene monomers</code>），再经加成聚合与助剂调配，便制成质轻、耐腐蚀、绝缘且易塑形的日常<strong>塑料（<code>plastics</code>）</strong>。", "start": 0.25, "end": 37.618}, {"speaker": "teacher", "role": "concept", "stepTag": "🔬 微观解密 · 热塑性塑料与无尖锐熔点", "boardId": "b1_1", "displayHtml": "再看第 1 张板书下方两框：所有加成聚合物皆属<strong>热塑性塑料（<code>thermoplastics</code>）</strong>，因为它们由<strong>独立长聚合物链（<code>separate long polymer chains</code>）</strong>组成，链间<strong>绝无共价交联键（<code>no covalent cross-links</code>）</strong>，仅靠微弱的分子间<strong>范德华力（<code>van der Waals' forces</code>）</strong>吸引；受热时链易互相滑移（<code>slide past one another</code>）而软化重塑。同时，由于样品是含<strong>不同链长（<code>different chain lengths</code>）</strong>大分子的混合物，故无尖锐熔点，只能在一段温度范围内逐渐软化。", "start": 37.958, "end": 87.422}, {"speaker": "teacher", "role": "concept", "stepTag": "⚡ 反应本质 · 加成聚合与饱和性变化", "boardId": "b1_2", "displayHtml": "切换到<strong>第 2 张板书</strong>（<code>28.3–28.4</code>）：<strong>加成聚合反应（<code>addition polymerization</code>）</strong>是指大量含 <code>C=C</code> 双键的不饱和单体（<code>monomer</code>）反复加成生成超大聚合物分子（<code>polymer</code>），且全程<strong>不脱去任何小分子（<code>without losing any small molecules</code>）</strong>。聚合后不饱和 <code>C=C</code> 已全部转化为饱和 <code>C—C</code> 单键，因此加成聚合物<strong>不能使溴溶液或酸化高锰酸钾溶液褪色</strong>！", "start": 88.042, "end": 132.658}, {"speaker": "teacher", "role": "example", "stepTag": "📐 满分画法 · H 字排布法实战丁-2-烯", "boardId": "b1_2", "displayHtml": "遇到复杂烯烃怎么画才零失误？盯紧第 2 张板书中央图示的<strong>“H 字排布法”</strong>！以 <code>but-2-ene (CH₃CH=CHCH₃)</code> 为例：严禁把 4 个碳横排成直线！看第 ① 格，<strong>只把双键的 2 个碳水平居中</strong>，两个 <code>—CH₃</code> 和两个 <code>—H</code> 竖直朝上朝下挂成标准 <strong>“H 字形”</strong>；聚合时把双键改为单键，向左右水平伸出延伸键即可——<strong>每个重复单位的水平主链永远只有 2 个碳原子</strong>！", "start": 132.998, "end": 180.446}, {"speaker": "teacher", "role": "trap", "stepTag": "⚠️ 生死红线 · Polymer 与 Repeating Unit 一字之差", "boardId": "b1_2", "displayHtml": "对比板书第 ② 格与第 ③ 格——这是考评局阅卷最严苛的<strong>零分生死线</strong>！画 <strong><code>polymer</code>（聚合物）</strong>时，需加方括号、延伸键穿出括号并在右下角写下标 <code>n</code>；但当题目要求画 <strong><code>repeating unit</code>（重复单位）</strong>时（第 ③ 格红框）：① <strong>左右两端必须画出开口延伸键 <code>—</code></strong>（漏画零分！）；② <strong>绝对禁止画方括号与下标 <code>n</code></strong>（多手写 <code>n</code> 直接零分！）", "start": 180.786, "end": 226.194}, {"speaker": "teacher", "role": "example", "stepTag": "🔪 逆向破译 · 主链两碳切片法例一", "boardId": "b1_3", "displayHtml": "若题目给出陌生聚合物长链反推单体 <code>systematic IUPAC name</code>，请看<strong>第 3 张板书</strong>的<strong>“主链两碳切片法”</strong>：沿水平碳主链<strong>每 2 个碳切一刀</strong>，擦掉两端延伸键，将中间单键恢复为 <code>C=C</code> 双键！看例 ① <code>—CH(CH₃)—CHCl—</code>：还原得 <code>CH₃—CH=CH—Cl</code>，把甲基并入主链共 <strong>3 个碳</strong>，从近氯端编号得 <strong><code>1-chloroprop-1-ene</code></strong>！", "start": 226.814, "end": 274.598}, {"speaker": "teacher", "role": "example", "stepTag": "🔪 逆向进阶 · 乙基侧链与交替共聚物识别", "boardId": "b1_3", "displayHtml": "再看例 ② <code>—CH₂—CH(CH₂CH₃)—</code>：切两碳恢复双键并将乙基并入主链，共 4 个碳，单体为 <strong><code>but-1-ene</code></strong>！而在例 ③ 中，第一刀切出 <code>ethene</code>，第二刀切出 <code>propene</code>——像这样由<strong>两种或以上不同单体</strong>共聚而成的聚合物称为<strong>共聚物（<code>copolymer</code>）</strong>，其完整重复单位需跨越 4 个主链碳！", "start": 274.938, "end": 319.722}, {"speaker": "teacher", "role": "summary", "stepTag": "🏁 本讲收束 · 三大通关口诀盘点", "boardId": "b1_3", "displayHtml": "第一讲核心三句话收束：① 加成聚合物皆由独立长链靠微弱 <code>van der Waals' forces</code> 吸引（无交联），受热链滑移软化，因链长不同而无固定熔点；② 正向画 <code>repeating unit</code> 用<strong>“H 字排布法”</strong>，主链仅 2 碳、两端带延伸键且<strong>绝不写 <code>n</code></strong>；③ 逆向推单体用<strong>“两碳切片法”</strong>恢复双键再找最长碳链。下一讲，我们一口气解锁课本必考的<strong>七大经典加成聚合物</strong>！", "start": 320.062, "end": 360.43}], "quickChecks": [{"q": "由丁-2-烯（but-2-ene, CH₃CH=CHCH₃）经加成聚合生成的聚合物，其重复单位（repeating unit）的正确简明结构式是？", "options": ["A. —[ CH(CH₃)—CH(CH₃) ]ₙ—", "B. —CH₂—CH₂—CH₂—CH₂—", "C. —CH(CH₃)—CH(CH₃)—", "D. CH₃CH=CHCH₃"], "ans": 2, "exp": "丁-2-烯的双键位于 C2=C3，按“H 字排布法”打开双键后，水平主链只有 2 个碳原子，各挂一个甲基；且画 repeating unit 时两端必须带开口延伸键 —，绝对禁止写方括号和下标 n，故 C 正确。"}, {"q": "某加成聚合物的一段链结构为 —CH(CH₃)—CHCl—CH(CH₃)—CHCl—，生成该聚合物的单体系统 IUPAC 名称是？", "options": ["A. 1-chloroprop-1-ene", "B. 3-chloroprop-1-ene", "C. 1-chloro-2-methylethene", "D. 2-chlorobut-2-ene"], "ans": 0, "exp": "沿主链切下前 2 个碳并将中间单键恢复为双键，得 CH₃—CH=CH—Cl；将甲基计入最长含双键碳链共 3 个碳（prop-1-ene），从连有 Cl 的双键端编为 C-1，系统命名为 1-chloroprop-1-ene。"}], "duration": 360.94, "audioFile": "audio/01_28.1-28.4_热塑性塑料微观原理与加聚重复单位书写铁律.mp3", "fullStart": 0.0, "fullEnd": 360.88}, {"id": "ep2", "epNum": "第 2 讲", "code": "28.5 上", "fileSlug": "02_28.5A_精工版七大经典加成聚合物单体结构与用途全表", "titleZh": "精工版七大经典加成聚合物全图谱：单体 IUPAC 命名、重复单位与用途", "titleEn": "The Seven Classic Addition Polymers: Monomers, Repeating Units & Uses", "goal": "用“乙烯换装变形记”串联精工版《Mastering Chemistry》七大必考加成聚合物（LDPE、HDPE、PP、PVC、PS、Perspex、PTFE），精准攻克四大高频单体系统 IUPAC 命名红线（严防俗名扣分！）及各自核心性质与日常用途配对。", "keyTerms": [{"en": "LDPE & HDPE", "zh": "低密度与高密度聚乙烯"}, {"en": "polypropene (PP)", "zh": "聚丙烯（高熔点 >160 °C）"}, {"en": "chloroethene", "zh": "氯乙烯（PVC 单体系统名）"}, {"en": "phenylethene", "zh": "苯乙烯（PS 单体系统名）"}, {"en": "methyl 2-methylpropenoate", "zh": "Perspex 有机玻璃单体"}, {"en": "tetrafluoroethene (PTFE)", "zh": "四氟乙烯（特氟龙单体）"}], "boards": [{"id": "b2_1", "tag": "板书 1 · 纯碳氢三剑客 (LDPE / HDPE / PP)", "title": "乙烯与丙烯三兄弟：高压 LDPE、低压催化 HDPE 与耐沸水聚丙烯（PP）", "html": "\n                <table class=\"b-mini-table\">\n                  <thead>\n                    <tr>\n                      <th>聚合物与缩写</th>\n                      <th>单体 IUPAC 名与条件</th>\n                      <th>重复单位（无 n）</th>\n                      <th>核心性质与典型日常用途（Properties &amp; Uses）</th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    <tr>\n                      <td><strong>① 低密度聚乙烯 <code>LDPE</code></strong><br><em>Low-density polyethene</em></td>\n                      <td><strong><code>ethene</code></strong> (<code>CH₂=CH₂</code>)<br>~200 °C, 1000–3000 atm, 微量 O₂</td>\n                      <td><code>—CH₂—CH₂—</code></td>\n                      <td>轻软、柔韧（<code>flexible</code>）、低熔点（~105 °C）<br>➔ 购物胶袋（<code>plastic bags</code>）、保鲜膜（<code>food wraps</code>）、挤压瓶</td>\n                    </tr>\n                    <tr>\n                      <td><strong>② 高密度聚乙烯 <code>HDPE</code></strong><br><em>High-density polyethene</em></td>\n                      <td><strong><code>ethene</code></strong> (<code>CH₂=CH₂</code>)<br>~60 °C, 低压 + 催化剂</td>\n                      <td><code>—CH₂—CH₂—</code></td>\n                      <td>硬挺（<code>rigid / stiff</code>）、抗拉强度高、熔点较高（~135 °C）<br>➔ 牛奶/清洁剂瓶（<code>detergent bottles</code>）、水桶（<code>buckets</code>）</td>\n                    </tr>\n                    <tr>\n                      <td><strong>③ 聚丙烯 <code>PP</code></strong><br><em>Polypropene</em></td>\n                      <td><strong><code>propene</code></strong><br>(<code>CH₂=CHCH₃</code>)</td>\n                      <td><code>—CH₂—CH(CH₃)—</code></td>\n                      <td>坚韧抗弯折、<strong>高熔点（&gt;160 °C，耐沸水消毒）</strong><br>➔ <strong>微波炉饭盒（<code>microwave food containers</code>）</strong>、绳索（<code>ropes</code>）</td>\n                    </tr>\n                  </tbody>\n                </table>\n                <div class=\"b-note\" style=\"margin-top:8px;\">💡 <strong>对比记忆</strong>：<code>LDPE</code> 与 <code>HDPE</code> 的单体及重复单位<strong>100% 相同</strong>，仅因聚合压力与催化剂不同导致支链多少迥异！</div>\n                ", "start": 0.25, "end": 94.19}, {"id": "b2_2", "tag": "板书 2 · 含氯与芳香双星 (PVC & PS)", "title": "IUPAC 命名扣分重灾区：PVC（chloroethene）与 PS（phenylethene）的双面用途", "html": "\n                <div class=\"board-grid-2\">\n                  <div class=\"b-box b-blue\">\n                    <div class=\"b-box-title\">④ 聚氯乙烯 <code>PVC</code> · <em>Polyvinyl chloride</em></div>\n                    <div class=\"b-eq\">单体系统名：<strong><code>chloroethene</code></strong> (<code>CH₂=CHCl</code>)</div>\n                    <div class=\"b-eq\">重复单位：<code>—CH₂—CHCl—</code></div>\n                    <ul class=\"b-points\">\n                      <li>⚠️ <strong>命名红线</strong>：问 <code>systematic IUPAC name</code> 时，写俗名 <em>vinyl chloride</em> <strong>直接零分</strong>！</li>\n                      <li><strong>硬质（无增塑剂）</strong>：地下排水管（<code>drain pipes</code>）、窗框。</li>\n                      <li><strong>软质（加 <code>plasticizer</code>）</strong>：浴帘（<code>shower curtains</code>）、雨衣、电线绝缘皮（<code>wire insulation</code>）。</li>\n                    </ul>\n                  </div>\n                  <div class=\"b-box b-rose\">\n                    <div class=\"b-box-title\">⑤ 聚苯乙烯 <code>PS</code> · <em>Polystyrene</em></div>\n                    <div class=\"b-eq\">单体系统名：<strong><code>phenylethene</code></strong> (<code>CH₂=CHC₆H₅</code>)</div>\n                    <div class=\"b-eq\">重复单位：<code>—CH₂—CH(C₆H₅)—</code></div>\n                    <ul class=\"b-points\">\n                      <li>⚠️ <strong>命名红线</strong>：问 <code>systematic IUPAC name</code> 时，写俗名 <em>styrene</em> <strong>直接零分</strong>！</li>\n                      <li><strong>未发泡普通 <code>PS</code></strong>：透明坚硬但<strong>易脆裂（<code>brittle</code>）</strong> ➔ 透明光碟盒（<code>CD cases</code>）、即弃杯。</li>\n                      <li><strong>发泡胶 <code>EPS</code></strong>：极轻、隔热防震 ➔ 外卖热食盒（<code>takeaway boxes</code>）、电器防震包装。</li>\n                    </ul>\n                  </div>\n                </div>\n                ", "start": 94.81, "end": 195.182}, {"id": "b2_3", "tag": "板书 3 · 特种王牌双雄 (Perspex & PTFE)", "title": "飞机舷窗有机玻璃（Perspex）与不粘锅之王特氟龙（PTFE / Teflon）结构与陷阱", "html": "\n                <div class=\"board-grid-2\">\n                  <div class=\"b-box b-amber\">\n                    <div class=\"b-box-title\">⑥ 有机玻璃 <code>Perspex</code> · 替代玻璃双刃剑</div>\n                    <div class=\"b-eq\">单体：<strong><code>methyl 2-methylpropenoate</code></strong><br>(<code>CH₂=C(CH₃)COOCH₃</code>)</div>\n                    <div class=\"b-eq\">重复单位：<code>—CH₂—C(CH₃)(COOCH₃)—</code></div>\n                    <ul class=\"b-points\">\n                      <li><strong>胜过玻璃</strong>：高度透明，且<strong>更轻（<code>lighter</code>）、强韧不易碎裂（<code>tougher / does not shatter easily</code>）</strong> ➔ 飞机舷窗（<code>aircraft windows</code>）、汽车灯罩（<code>car light lenses</code>）。</li>\n                      <li><strong>不及玻璃</strong>：表面较软，<strong>更容易被刮花（<code>more easily scratched</code>）</strong>！</li>\n                      <li>⚠️ <strong>定性陷阱</strong>：酯基仅在侧链，主链全为 <code>C—C</code> 碳链，必属<strong>加成聚合物（<code>addition polymer</code>）</strong>！</li>\n                    </ul>\n                  </div>\n                  <div class=\"b-box b-teal\">\n                    <div class=\"b-box-title\">⑦ 特氟龙 <code>PTFE / Teflon</code> · <em>Polytetrafluoroethene</em></div>\n                    <div class=\"b-eq\">单体：<strong><code>tetrafluoroethene</code></strong> (<code>CF₂=CF₂</code>)</div>\n                    <div class=\"b-eq\">重复单位：<code>—CF₂—CF₂—</code>（4 个 H 全换 F！）</div>\n                    <ul class=\"b-points\">\n                      <li><strong>超强 <code>C—F</code> 共价键</strong>赋予三大神技：表面光滑蜡质<strong>不粘（<code>non-stick</code>）</strong>、极耐高温（熔点 ~327 °C）、极耐强酸强碱腐蚀。</li>\n                      <li><strong>经典用途</strong>：平底煎锅不粘涂层（<code>non-stick coating on frying pans</code>）、耐腐蚀化工管道阀门。</li>\n                    </ul>\n                  </div>\n                </div>\n                ", "start": 195.802, "end": 382.15}], "turns": [{"speaker": "teacher", "role": "concept", "stepTag": "🧰 全局串联 · 乙烯换装变形记与聚乙烯双子", "boardId": "b2_1", "displayHtml": "欢迎回到第 2 讲！课本 <code>28.5</code> 的七大王牌塑料，本质上全是乙烯（<code>CH₂=CH₂</code>）的<strong>“换装变形金刚”</strong>！先看<strong>第 1 张板书</strong>前两位：直接用 <code>ethene</code> 聚合——① <strong><code>LDPE</code>（低密度聚乙烯）</strong>在高压（1000–3000 atm）下生成，轻软柔韧，做购物胶袋与保鲜膜（<code>food wraps</code>）；② <strong><code>HDPE</code>（高密度聚乙烯）</strong>在低压加催化剂下生成，硬挺抗拉，做清洁剂瓶与水桶（<code>buckets</code>）。", "start": 0.25, "end": 50.122}, {"speaker": "teacher", "role": "example", "stepTag": "🔥 耐热担当 · 聚丙烯 PP 与微波炉饭盒", "boardId": "b2_1", "displayHtml": "再看板书第 ③ 行：把乙烯的 1 个 H 换成甲基，单体变为丙烯（<strong><code>propene</code></strong>, <code>CH₂=CHCH₃</code>），聚合成<strong>聚丙烯（<code>polypropene, PP</code>）</strong>，重复单位为 <code>—CH₂—CH(CH₃)—</code>。<code>PP</code> 最突出的优势是<strong>高熔点（&gt;160 °C，耐沸水消毒）</strong>且耐弯折，是制作<strong>微波炉饭盒（<code>microwave food containers</code>）</strong>与高强度绳索（<code>ropes</code>）的首选！", "start": 50.462, "end": 94.19}, {"speaker": "teacher", "role": "trap", "stepTag": "⚠️ 含氯明星 · PVC 单体命名红线与软硬两用", "boardId": "b2_2", "displayHtml": "切换到<strong>第 2 张板书</strong>左框看 ④ <strong>聚氯乙烯（<code>PVC</code>）</strong>：乙烯的 1 个 H 换成 Cl 得 <code>CH₂=CHCl</code>。⚠️ <strong>阅卷死命令</strong>：当题目问 <code>systematic IUPAC name</code> 时，必须写系统名 <strong><code>chloroethene</code></strong>（写俗名 <em>vinyl chloride</em> 零分！）。无增塑剂的硬质 <code>PVC</code> 做地下排水管（<code>drain pipes</code>）；加增塑剂变软后做浴帘（<code>shower curtains</code>）与电线绝缘外皮（<code>wire insulation</code>）。", "start": 94.81, "end": 142.09}, {"speaker": "teacher", "role": "trap", "stepTag": "💿 芳香明星 · PS 苯乙烯命名红线与发泡变身", "boardId": "b2_2", "displayHtml": "再看板书右框 ⑤ <strong>聚苯乙烯（<code>PS</code>）</strong>：乙烯的 1 个 H 换成苯基（<code>—C₆H₅</code>）。⚠️ <strong>同样死记</strong>：单体系统 IUPAC 名称必须写 <strong><code>phenylethene</code></strong>（禁写俗名 <em>styrene</em>！）。未发泡普通 <code>PS</code> 透明坚硬但<strong>质脆易裂（<code>brittle</code>）</strong>，做光碟盒（<code>CD cases</code>）；而<strong>发泡聚苯乙烯（<code>expanded PS, EPS</code>）</strong>极轻且隔热防震，广泛用于外卖保温饭盒（<code>takeaway boxes</code>）与防震包装。", "start": 142.43, "end": 195.182}, {"speaker": "teacher", "role": "example", "stepTag": "✈️ 有机玻璃 · Perspex 长名字三步拆解法", "boardId": "b2_3", "displayHtml": "进入<strong>第 3 张板书</strong>左框攻克 ⑥ <strong>有机玻璃（<code>Perspex</code>）</strong>！用三步拆解法秒记单体名：3 碳丙烯酸 <code>propenoic acid</code> ➔ 2 号碳挂甲基 <code>2-methylpropenoic acid</code> ➔ 变成甲酯即得 <strong><code>methyl 2-methylpropenoate</code></strong>（<code>CH₂=C(CH₃)COOCH₃</code>）！画重复单位时，右边主链碳上下分别挂着 <code>—CH₃</code> 和 <code>—COOCH₃</code>：<code>—CH₂—C(CH₃)(COOCH₃)—</code>。", "start": 195.802, "end": 241.858}, {"speaker": "teacher", "role": "trap", "stepTag": "🔍 双重必考 · Perspex 对比玻璃优劣与加聚定性", "boardId": "b2_3", "displayHtml": "围绕 <code>Perspex</code> 必考两问：① <strong>替代玻璃做飞机舷窗（<code>aircraft windows</code>）与车灯罩（<code>car light lenses</code>）的优劣</strong>——优点是高度透明且<strong>更轻（<code>lighter</code>）、强韧不易碎（<code>tougher / does not shatter easily</code>）</strong>；缺点是比玻璃<strong>更容易被刮花（<code>more easily scratched than glass</code>）</strong>！② <strong>分类陷阱</strong>——酯基 <code>—COOCH₃</code> 仅挂在侧链，主链全为碳原子，故它 <strong>100% 属于加成聚合物（<code>addition polymer</code>）</strong>而非聚酯！", "start": 242.198, "end": 290.438}, {"speaker": "teacher", "role": "concept", "stepTag": "🍳 不粘神盾 · PTFE 特氟龙与超强碳氟键", "boardId": "b2_3", "displayHtml": "最后看板书右框 ⑦ <strong>聚四氟乙烯（<code>PTFE / Teflon</code>）</strong>：把乙烯的 <strong>4 个 H 全部换成 F</strong>，单体为 <strong><code>tetrafluoroethene</code></strong>（<code>CF₂=CF₂</code>），重复单位为 <code>—CF₂—CF₂—</code>（切勿与仅 1 个 Cl 的 <code>PVC</code> 混淆！）。极牢固的 <strong><code>C—F</code> 键</strong>赋予它耐高温、抗强酸强碱腐蚀及<strong>不粘性（<code>non-stick</code>）</strong>，专用于煎锅不粘涂层（<code>non-stick coating on frying pans</code>）与化工阀门。", "start": 290.778, "end": 342.402}, {"speaker": "teacher", "role": "summary", "stepTag": "🏁 七星归位 · 四大高危 IUPAC 单体名快检", "boardId": "b2_3", "displayHtml": "七大王牌加成聚合物集结完毕！牢牢锁死四大高危单体系统 IUPAC 名称：<code>PVC</code> ➔ <strong><code>chloroethene</code></strong>；<code>PS</code> ➔ <strong><code>phenylethene</code></strong>；<code>Perspex</code> ➔ <strong><code>methyl 2-methylpropenoate</code></strong>；<code>PTFE</code> ➔ <strong><code>tetrafluoroethene</code></strong>！下一讲，我们将深入分子层面，揭秘 <code>LDPE vs HDPE</code> 软硬悬殊之谜，以及增塑剂与发泡剂的微观魔法！", "start": 342.742, "end": 382.15}], "quickChecks": [{"q": "在 HKDSE 考试中，若题目要求写出聚苯乙烯（polystyrene, PS）与聚氯乙烯（PVC）单体的系统 IUPAC 名称（systematic IUPAC names），下列哪一组完全正确？", "options": ["A. styrene 与 vinyl chloride", "B. phenylethene 与 chloroethene", "C. phenylpropene 与 tetrachloroethene", "D. benzeneethene 与 1,1-dichloroethene"], "ans": 1, "exp": "styrene 与 vinyl chloride 均为俗名（common names），当题目明确要求 systematic IUPAC name 时不予给分；PS 单体的系统名为 phenylethene（CH₂=CHC₆H₅），PVC 单体的系统名为 chloroethene（CH₂=CHCl）。"}, {"q": "下列关于有机玻璃（Perspex）的叙述，哪一项是错误的？", "options": ["A. 它的单体系统命名为 methyl 2-methylpropenoate", "B. 相比普通玻璃，它更轻且强韧不易碎裂（tougher / does not shatter easily），适合做飞机舷窗", "C. 它的表面硬度比普通玻璃更高，更难被硬物刮花", "D. 虽然侧链含有酯基（—COOCH₃），但它依然属于加成聚合物（addition polymer）"], "ans": 2, "exp": "Perspex 相比玻璃的主要局限（disadvantage）正是表面较软、比玻璃更容易被刮花（more easily scratched than glass），故 C 错误；A、B、D 均完全正确。"}], "duration": 382.66, "audioFile": "audio/02_28.5A_精工版七大经典加成聚合物单体结构与用途全表.mp3", "fullStart": 362.38, "fullEnd": 744.98}, {"id": "ep3", "epNum": "第 3 讲", "code": "28.5 下", "fileSlug": "03_28.5B_LDPE与HDPE支链堆积对比及增塑剂发泡胶原理", "titleZh": "微观结构决定宏观性质：LDPE vs HDPE 三段论、PVC 增塑剂与发泡胶原理", "titleEn": "Structure-Property Relationships: LDPE vs HDPE, Plasticizers & Expanded PS", "goal": "掌握 HKDSE 长题目必考的“链结构/助剂 ➔ 链堆积紧密程度 ➔ 链间范德华力强弱 ➔ 宏观机械与热性质”黄金逻辑链，熟练背诵 LDPE vs HDPE 三分英文模板、PVC 增塑剂分子机制及 EPS 戊烷发泡隔热采分句。", "keyTerms": [{"en": "chain branching", "zh": "分子链支化程度"}, {"en": "pack closely together", "zh": "紧密堆积（提高密度与引力）"}, {"en": "tensile strength & rigidity", "zh": "抗拉强度与硬挺度"}, {"en": "plasticizer", "zh": "增塑剂（撑开链距助滑移）"}, {"en": "foaming / blowing agent", "zh": "发泡剂（如低沸点戊烷）"}, {"en": "poor conductor of heat", "zh": "热的不良导体（被困气体）"}], "boards": [{"id": "b3_1", "tag": "板书 1 · LDPE vs HDPE 满分三段论 (28.5)", "title": "同是乙烯聚合，为何一软一硬？LDPE 多支链 vs HDPE 直链 HKEAA 三分英文模板", "html": "\n<svg class=\"board-svg\" viewBox=\"0 0 780 230\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"LDPE 多支链松散堆积与 HDPE 直链紧密堆积微观对比图\">\n  <defs>\n    <linearGradient id=\"u28GradPE\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#f8fafc\"/>\n      <stop offset=\"100%\" stop-color=\"#eff6ff\"/>\n    </linearGradient>\n  </defs>\n  <rect x=\"0\" y=\"0\" width=\"780\" height=\"230\" rx=\"12\" fill=\"url(#u28GradPE)\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>\n  <text x=\"390\" y=\"24\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#1e3a8a\">微观支链程度决定宏观性质：LDPE 多支链松散堆积 vs HDPE 直链紧密堆积</text>\n\n  <!-- Left Card: LDPE -->\n  <rect x=\"16\" y=\"36\" width=\"366\" height=\"182\" rx=\"10\" fill=\"#ffffff\" stroke=\"#fcd34d\" stroke-width=\"1.5\"/>\n  <rect x=\"16\" y=\"36\" width=\"366\" height=\"28\" rx=\"10\" fill=\"#fef3c7\"/>\n  <text x=\"199\" y=\"55\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"800\" fill=\"#b45309\">① LDPE 低密度聚乙烯（高压聚合 · 多支链）</text>\n  <!-- Heavily branched chains -->\n  <path d=\"M 38 84 Q 95 76, 150 86 T 265 82 T 358 88\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2.6\" stroke-linecap=\"round\"/>\n  <path d=\"M 92 80 L 112 68 M 175 84 L 198 102 M 280 83 L 302 69\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2.3\" stroke-linecap=\"round\"/>\n  <path d=\"M 42 120 Q 108 130, 170 116 T 288 124 T 356 116\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2.6\" stroke-linecap=\"round\"/>\n  <path d=\"M 80 124 L 102 104 M 148 120 L 166 138 M 242 120 L 265 102 M 315 121 L 334 137\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2.3\" stroke-linecap=\"round\"/>\n  <path d=\"M 38 154 Q 112 146, 185 156 T 302 150 T 358 156\" fill=\"none\" stroke=\"#d97706\" stroke-width=\"2.6\" stroke-linecap=\"round\"/>\n  <path d=\"M 118 150 L 138 136 M 228 154 L 250 138\" fill=\"none\" stroke=\"#ef4444\" stroke-width=\"2.3\" stroke-linecap=\"round\"/>\n  <text x=\"199\" y=\"177\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"800\" fill=\"#b45309\">Heavily branched chains ➔ cannot pack closely</text>\n  <text x=\"199\" y=\"194\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#334155\">链间距大 ➔ 较低密度 + 较弱链间 van der Waals' forces</text>\n  <text x=\"199\" y=\"210\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#dc2626\">柔软易弯（flexible）、低熔点（~105 °C）：购物胶袋、保鲜膜</text>\n\n  <!-- Right Card: HDPE -->\n  <rect x=\"398\" y=\"36\" width=\"366\" height=\"182\" rx=\"10\" fill=\"#ffffff\" stroke=\"#5eead4\" stroke-width=\"1.5\"/>\n  <rect x=\"398\" y=\"36\" width=\"366\" height=\"28\" rx=\"10\" fill=\"#ccfbf1\"/>\n  <text x=\"581\" y=\"55\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"800\" fill=\"#0f766e\">② HDPE 高密度聚乙烯（低压催化 · 极少支链）</text>\n  <!-- Closely packed linear chains -->\n  <path d=\"M 424 82 Q 500 79, 580 82 T 738 82\" fill=\"none\" stroke=\"#0f766e\" stroke-width=\"2.7\" stroke-linecap=\"round\"/>\n  <path d=\"M 424 102 Q 500 99, 580 102 T 738 102\" fill=\"none\" stroke=\"#0f766e\" stroke-width=\"2.7\" stroke-linecap=\"round\"/>\n  <path d=\"M 424 122 Q 500 119, 580 122 T 738 122\" fill=\"none\" stroke=\"#0f766e\" stroke-width=\"2.7\" stroke-linecap=\"round\"/>\n  <path d=\"M 424 142 Q 500 139, 580 142 T 738 142\" fill=\"none\" stroke=\"#0f766e\" stroke-width=\"2.7\" stroke-linecap=\"round\"/>\n  <path d=\"M 615 102 L 628 94\" fill=\"none\" stroke=\"#14b8a6\" stroke-width=\"2\" stroke-linecap=\"round\"/>\n  <!-- Dashed intermolecular vdw indicators -->\n  <line x1=\"470\" y1=\"84\" x2=\"470\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"545\" y1=\"84\" x2=\"545\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3,3\"/>\n  <line x1=\"665\" y1=\"84\" x2=\"665\" y2=\"140\" stroke=\"#64748b\" stroke-width=\"1.2\" stroke-dasharray=\"3,3\"/>\n  <text x=\"581\" y=\"160\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"700\" fill=\"#0d9488\">▲ 链紧密贴合：stronger intermolecular van der Waals' forces</text>\n  <text x=\"581\" y=\"177\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"800\" fill=\"#0f766e\">Linear chains (little branching) ➔ pack closely together</text>\n  <text x=\"581\" y=\"194\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#334155\">紧密堆积 ➔ 较高密度 + 较强链间范德华力</text>\n  <text x=\"581\" y=\"210\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#0f766e\">硬挺抗拉（rigid）、高熔点（~135 °C）：清洁剂瓶、水桶</text>\n</svg>\n\n                <div class=\"b-quote\" style=\"margin-top:9px; margin-bottom:0;\">\n                  <div class=\"b-quote-en\"><strong>🏆 HKEAA 3-Mark Standard Answer Template（一字不差背诵模板）</strong>：<br>\n                  • <strong>[1M 支链对比]</strong> Polymer chains of <strong>HDPE are linear / have much less branching</strong> than the <strong>heavily branched</strong> chains of LDPE.<br>\n                  • <strong>[1M 堆积与密度]</strong> Hence HDPE chains can <strong>pack more closely together</strong>, giving a <strong>higher density</strong>.<br>\n                  • <strong>[1M 作用力与硬挺熔点]</strong> Closer packing leads to <strong>stronger intermolecular van der Waals' forces between polymer chains</strong>, resulting in <strong>greater rigidity, higher tensile strength and higher melting point</strong>.</div>\n                </div>\n                ", "start": 0.25, "end": 124.914}, {"id": "b3_2", "tag": "板书 2 · PVC 增塑剂分子作用机制 (28.5)", "title": "硬质排水管如何变软质浴帘？增塑剂（Plasticizer）的“隔离滚珠”两分采分链", "html": "\n<svg class=\"board-svg\" viewBox=\"0 0 780 220\" xmlns=\"http://www.w3.org/2000/svg\" role=\"img\" aria-label=\"增塑剂分子插入 PVC 聚合物链间削弱范德华力微观原理图\">\n  <defs>\n    <linearGradient id=\"u28GradPVC\" x1=\"0\" y1=\"0\" x2=\"1\" y2=\"1\">\n      <stop offset=\"0%\" stop-color=\"#f8fafc\"/>\n      <stop offset=\"100%\" stop-color=\"#f0fdf4\"/>\n    </linearGradient>\n  </defs>\n  <rect x=\"0\" y=\"0\" width=\"780\" height=\"220\" rx=\"12\" fill=\"url(#u28GradPVC)\" stroke=\"#cbd5e1\" stroke-width=\"1.5\"/>\n  <text x=\"390\" y=\"24\" text-anchor=\"middle\" font-size=\"13.5\" font-weight=\"800\" fill=\"#1e3a8a\">增塑剂（Plasticizer）微观作用图解：小分子挤入 PVC 长链间撑大距离 ➔ 链易滑移变柔软</text>\n\n  <!-- Left Card: Unplasticized PVC -->\n  <rect x=\"14\" y=\"36\" width=\"336\" height=\"170\" rx=\"10\" fill=\"#ffffff\" stroke=\"#93c5fd\" stroke-width=\"1.5\"/>\n  <rect x=\"14\" y=\"36\" width=\"336\" height=\"28\" rx=\"10\" fill=\"#dbeafe\"/>\n  <text x=\"182\" y=\"55\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"800\" fill=\"#1d4ed8\">① 硬质 PVC（Unplasticized · 无增塑剂）</text>\n  <line x1=\"36\" y1=\"86\" x2=\"328\" y2=\"86\" stroke=\"#1d4ed8\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n  <line x1=\"36\" y1=\"112\" x2=\"328\" y2=\"112\" stroke=\"#1d4ed8\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n  <line x1=\"36\" y1=\"138\" x2=\"328\" y2=\"138\" stroke=\"#1d4ed8\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n  <!-- Cl badges & strong vdw -->\n  <circle cx=\"88\" cy=\"86\" r=\"5\" fill=\"#2563eb\"/>\n  <circle cx=\"182\" cy=\"112\" r=\"5\" fill=\"#2563eb\"/>\n  <circle cx=\"272\" cy=\"138\" r=\"5\" fill=\"#2563eb\"/>\n  <line x1=\"70\" y1=\"89\" x2=\"70\" y2=\"135\" stroke=\"#ef4444\" stroke-width=\"1.4\" stroke-dasharray=\"3,2\"/>\n  <line x1=\"145\" y1=\"89\" x2=\"145\" y2=\"135\" stroke=\"#ef4444\" stroke-width=\"1.4\" stroke-dasharray=\"3,2\"/>\n  <line x1=\"225\" y1=\"89\" x2=\"225\" y2=\"135\" stroke=\"#ef4444\" stroke-width=\"1.4\" stroke-dasharray=\"3,2\"/>\n  <line x1=\"298\" y1=\"89\" x2=\"298\" y2=\"135\" stroke=\"#ef4444\" stroke-width=\"1.4\" stroke-dasharray=\"3,2\"/>\n  <text x=\"182\" y=\"168\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"700\" fill=\"#1e3a8a\">链间距小 ➔ 链间 van der Waals' forces 强，难滑移</text>\n  <text x=\"182\" y=\"188\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#475569\">宏观硬挺（rigid）：地下排水管（drain pipes）、窗框</text>\n\n  <!-- Arrow -->\n  <text x=\"378\" y=\"108\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"800\" fill=\"#b45309\">+ 增塑剂</text>\n  <text x=\"378\" y=\"128\" text-anchor=\"middle\" font-size=\"18\" font-weight=\"800\" fill=\"#059669\">⟶</text>\n\n  <!-- Right Card: Plasticized PVC -->\n  <rect x=\"406\" y=\"36\" width=\"360\" height=\"170\" rx=\"10\" fill=\"#ffffff\" stroke=\"#6ee7b7\" stroke-width=\"1.5\"/>\n  <rect x=\"406\" y=\"36\" width=\"360\" height=\"28\" rx=\"10\" fill=\"#d1fae5\"/>\n  <text x=\"586\" y=\"55\" text-anchor=\"middle\" font-size=\"12.5\" font-weight=\"800\" fill=\"#047857\">② 软质 PVC（Plasticized · 含增塑剂小分子）</text>\n  <line x1=\"428\" y1=\"78\" x2=\"740\" y2=\"78\" stroke=\"#047857\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n  <line x1=\"438\" y1=\"114\" x2=\"748\" y2=\"114\" stroke=\"#047857\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n  <line x1=\"426\" y1=\"150\" x2=\"738\" y2=\"150\" stroke=\"#047857\" stroke-width=\"3\" stroke-linecap=\"round\"/>\n  <!-- Plasticizer spacer molecules -->\n  <rect x=\"472\" y=\"88\" width=\"44\" height=\"16\" rx=\"8\" fill=\"#fef08a\" stroke=\"#d97706\" stroke-width=\"1.5\"/>\n  <text x=\"494\" y=\"100\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"800\" fill=\"#92400e\">增塑剂</text>\n  <rect x=\"618\" y=\"88\" width=\"44\" height=\"16\" rx=\"8\" fill=\"#fef08a\" stroke=\"#d97706\" stroke-width=\"1.5\"/>\n  <text x=\"640\" y=\"100\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"800\" fill=\"#92400e\">增塑剂</text>\n  <rect x=\"542\" y=\"124\" width=\"44\" height=\"16\" rx=\"8\" fill=\"#fef08a\" stroke=\"#d97706\" stroke-width=\"1.5\"/>\n  <text x=\"564\" y=\"136\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"800\" fill=\"#92400e\">增塑剂</text>\n  <rect x=\"680\" y=\"124\" width=\"44\" height=\"16\" rx=\"8\" fill=\"#fef08a\" stroke=\"#d97706\" stroke-width=\"1.5\"/>\n  <text x=\"702\" y=\"136\" text-anchor=\"middle\" font-size=\"9.5\" font-weight=\"800\" fill=\"#92400e\">增塑剂</text>\n  <!-- Sliding indicator -->\n  <text x=\"726\" y=\"73\" text-anchor=\"middle\" font-size=\"11\" font-weight=\"800\" fill=\"#dc2626\">⇄</text>\n  <text x=\"586\" y=\"172\" text-anchor=\"middle\" font-size=\"11.5\" font-weight=\"800\" fill=\"#047857\">撑大链间距 ➔ 削弱链间范德华力，链易互相滑移</text>\n  <text x=\"586\" y=\"191\" text-anchor=\"middle\" font-size=\"11.5\" fill=\"#475569\">宏观柔韧（flexible）：浴帘（shower curtains）、电线绝缘皮</text>\n</svg>\n\n                <div class=\"b-note\" style=\"margin-top:9px;\">\n                  ✍️ <strong>英文卷 2 分标准答法</strong>：① <strong><code>Plasticizer molecules get between the PVC polymer chains and keep them further apart</code></strong>, weakening the <strong><code>intermolecular van der Waals' forces</code></strong> between the chains <code>[1M]</code>；② Hence the polymer chains can <strong><code>slide past one another more easily</code></strong>, making PVC more flexible <code>[1M]</code>。（❌ 严禁错写成打断共价键或建立 cross-links！）\n                </div>\n                ", "start": 125.534, "end": 204.234}, {"id": "b3_3", "tag": "板书 3 · PS 苯环位阻与 EPS 发泡隔热原理 (28.5)", "title": "普通 PS 为何硬而脆？发泡聚苯乙烯（EPS）中戊烷发泡剂与保温隔热满分答法", "html": "\n                <div class=\"board-grid-2\">\n                  <div class=\"b-box b-rose\">\n                    <div class=\"b-box-title\">① 为何未发泡普通 <code>PS</code> 硬而脆（<code>Brittle</code>）？</div>\n                    <ul class=\"b-points\">\n                      <li><strong>空间位阻卡位</strong>：<code>PS</code> 主链上密集挂着体积庞大的<strong>苯基 / 苯环（<code>bulky phenyl / benzene rings, —C₆H₅</code>）</strong>。</li>\n                      <li>庞大苯环<strong>阻碍聚合物链自由旋转及互相滑移（<code>hinder chain rotation and sliding</code>）</strong>，令材料坚硬挺括；但受猛烈撞击时链来不及滑移缓冲，便直接脆裂（<code>cracks easily</code>）。</li>\n                    </ul>\n                  </div>\n                  <div class=\"b-box b-amber\">\n                    <div class=\"b-box-title\">② 发泡胶 <code>EPS</code> 制造与保温隔热 2 分模板</div>\n                    <ul class=\"b-points\">\n                      <li><strong>制造原理 <code>[1M]</code></strong>：将 <code>PS</code> 珠粒与低沸点烷烃（如<strong>戊烷 <code>pentane</code></strong>）共热；戊烷充当<strong>发泡剂（<code>foaming agent / blowing agent</code>）</strong>，受热汽化膨胀在塑料内困住大量微细气泡（<code>traps tiny gas / air bubbles</code>）。</li>\n                      <li><strong>隔热采分句 <code>[1M]</code></strong>：<strong><code>Trapped air / gas is a poor conductor of heat</code></strong>（被困气体是热的不良导体）➔ 极佳隔热体（<code>good heat insulator</code>），兼防震缓冲！</li>\n                    </ul>\n                  </div>\n                </div>\n                ", "start": 204.854, "end": 342.286}], "turns": [{"speaker": "teacher", "role": "concept", "stepTag": "🥢 树枝与筷子 · LDPE 与 HDPE 支链堆积图解", "boardId": "b3_1", "displayHtml": "欢迎来到第 3 讲！同由乙烯聚合，为何软硬悬殊？请看<strong>第 1 张板书</strong>微观图示：左图 <code>LDPE</code> 分子链长满分支（<strong><code>heavily branched chains</code></strong>），像蓬松树枝无法挨紧，链间距大；右图 <code>HDPE</code> 为极少支链的线性长链（<strong><code>linear chains with very little branching</code></strong>），像整齐捆紧的筷子般<strong>紧密堆积（<code>pack closely together</code>）</strong>！", "start": 0.25, "end": 47.026}, {"speaker": "teacher", "role": "example", "stepTag": "🏆 考场满贯 · HKEAA 三分英文因果链逐分拆解", "boardId": "b3_1", "displayHtml": "这道经典 3 分题必须逐分踩点：① <strong>[1M 支链]</strong> <code>Polymer chains of HDPE have much less branching than the heavily branched chains of LDPE</code>；② <strong>[1M 密度]</strong> <code>HDPE chains pack more closely together, giving a higher density</code>；③ <strong>[1M 作用力与性质]</strong> <code>Closer packing leads to stronger intermolecular van der Waals' forces between polymer chains</code>，故硬挺度（<code>rigidity</code>）、抗拉强度（<code>tensile strength</code>）与熔点均更高！", "start": 47.366, "end": 81.83}, {"speaker": "teacher", "role": "trap", "stepTag": "⚠️ 阅卷避坑 · 别拿相对分子质量或氢键乱凑分", "boardId": "b3_1", "displayHtml": "⚠️ <strong>两大阅卷雷区</strong>：① 严禁回答“因为 <code>HDPE</code> 相对分子质量更大所以密度高”——考评局唯一认可的根本原因是<strong>支化程度（<code>extent of branching</code>）决定的紧密堆积（<code>close packing</code>）</strong>！② 聚乙烯只含 C、H，<strong>绝无氢键（<code>no hydrogen bonds</code>）</strong>，软化熔融也绝非断共价键，必须写明 <strong><code>intermolecular van der Waals' forces between polymer chains</code></strong>！", "start": 82.17, "end": 124.914}, {"speaker": "teacher", "role": "concept", "stepTag": "🟡 隔离滚珠 · 增塑剂软化硬质 PVC 微观图解", "boardId": "b3_2", "displayHtml": "切换到<strong>第 2 张板书</strong>看 <code>PVC</code> 软化魔术：左图纯 <code>PVC</code> 因极性 <code>C—Cl</code> 键使链间距离近、<code>van der Waals' forces</code> 较强，分子链难滑移而硬挺（做排水管）；右图掺入高沸点小分子<strong>增塑剂（<code>plasticizer</code>，黄色胶囊）</strong>，它们像“隔离滚珠”般钻进相邻的 <code>PVC</code> 聚合物长链之间！", "start": 125.534, "end": 168.662}, {"speaker": "teacher", "role": "example", "stepTag": "✍️ 两分必拿 · 增塑剂英文采分句与交联辨析", "boardId": "b3_2", "displayHtml": "紧盯板书底部的 <strong>2 分英文采分链</strong>：① <code>Plasticizer molecules get between the PVC polymer chains and keep them further apart, weakening the intermolecular van der Waals' forces between chains</code> <code>[1M]</code>；② <code>Polymer chains can slide past one another more easily</code>，使塑料变得柔韧（<code>flexible</code>）<code>[1M]</code>。切勿将软化塑料的 <code>plasticizer</code> 与建立共价桥变硬的 <code>cross-linking</code> 搞混！", "start": 169.002, "end": 204.234}, {"speaker": "teacher", "role": "concept", "stepTag": "💍 苯环卡位 · 为什么普通光碟盒 PS 又硬又脆？", "boardId": "b3_3", "displayHtml": "切换到<strong>第 3 张板书</strong>左框：为什么未发泡普通 <code>PS</code> 光碟盒又硬又脆（<code>hard and brittle</code>）？因为主链密集挂着体积庞大的<strong>苯基/苯环（<code>bulky phenyl rings, —C₆H₅</code>）</strong>，巨大空间位阻<strong>阻碍聚合物链旋转与互相滑移（<code>hinder chain rotation and sliding</code>）</strong>，受撞击时来不及形变缓冲便直接脆裂！", "start": 204.854, "end": 248.702}, {"speaker": "teacher", "role": "example", "stepTag": "🫧 吹泡魔法 · 戊烷发泡剂与发泡胶隔热两分模板", "boardId": "b3_3", "displayHtml": "再看右框发泡胶（<code>EPS</code>）必考两问：① <strong>戊烷（<code>pentane</code>）的作用</strong>——充当<strong>发泡剂（<code>foaming agent / blowing agent</code>）</strong>（禁答催化剂或增塑剂！），受热汽化膨胀在塑料内困住大量微细气泡（<code>traps tiny gas / air bubbles</code>）<code>[1M]</code>；② <strong>为何能做热食保温盒</strong>——因为 <strong><code>trapped air / gas is a poor conductor of heat</code></strong>（被困气体是热的不良导体），故具极佳隔热性（<code>good heat insulator</code>）<code>[1M]</code>！", "start": 249.042, "end": 298.074}, {"speaker": "teacher", "role": "summary", "stepTag": "🏁 本讲收束 · 结构—作用力—性质万能金三角", "boardId": "b3_3", "displayHtml": "本讲三大王牌解释题汇聚成同一座<strong>“结构—作用力—性质”金三角</strong>：<code>HDPE</code> 少支链紧密堆积 ➔ 增强链间范德华力而硬挺高密度；<code>plasticizer</code> 撑开 <code>PVC</code> 链距 ➔ 削弱链间范德华力而柔韧；<code>pentane</code> 发泡剂困住微细气泡 ➔ 靠 <code>poor conductor of heat</code> 隔热保温。下一讲收官课，我们将直面废塑料危机与<strong>四大废物管理方案</strong>！", "start": 298.414, "end": 342.286}], "quickChecks": [{"q": "从分子结构与分子间作用力角度解释，为什么高密度聚乙烯（HDPE）比低密度聚乙烯（LDPE）具有更高的密度和抗拉强度？", "options": ["A. HDPE 分子链之间形成了牢固的氢键（hydrogen bonds），而 LDPE 没有", "B. HDPE 分子链支链极少（little branching），比多支链的 LDPE 堆积更紧密，且链间范德华力更强", "C. HDPE 的重复单位含有碳碳双键，而 LDPE 只含碳碳单键", "D. HDPE 的链与链之间存在大量共价交联键（covalent cross-links）"], "ans": 1, "exp": "HDPE 聚合物链呈线性、支链极少（little branching），能比富含支链（heavily branched）的 LDPE 更紧密地堆积在一起（pack more closely together），因此密度更高，且相邻分子链间的范德华力更强，抗拉强度与熔点更高。"}, {"q": "制造发泡聚苯乙烯（expanded polystyrene, EPS）时常加入低沸点戊烷（pentane）共热。戊烷的作用是什么？EPS 为何适合做热饮保温杯？", "options": ["A. 催化剂（catalyst）；因为苯环能反射红外线", "B. 增塑剂（plasticizer）；因为戊烷削弱了链间范德华力", "C. 发泡剂（foaming / blowing agent）；因为内部困住的大量微细气泡（空气/气体）是热的不良导体（poor conductor of heat）", "D. 脱水剂（dehydrating agent）；因为聚苯乙烯能吸收水蒸气放热"], "ans": 2, "exp": "低沸点戊烷受热汽化膨胀充当发泡剂（foaming / blowing agent），在聚苯乙烯内困住大量微细气泡；由于被困住的气体/空气是热的不良导体（poor conductor of heat），使 EPS 成为极佳的隔热保温材料。"}], "duration": 342.79, "audioFile": "audio/03_28.5B_LDPE与HDPE支链堆积对比及增塑剂发泡胶原理.mp3", "fullStart": 746.48, "fullEnd": 1089.22}, {"id": "ep4", "epNum": "第 4 讲", "code": "28.6 – 28.7", "fileSlug": "04_28.6-28.7_塑料不可生物降解困局与四大废物管理方案评估", "titleZh": "塑料不可生物降解危机与四大废物管理方案（堆填、焚化、回收与热裂解）", "titleEn": "Non-Biodegradability & Evaluating Four Plastic Waste Management Methods", "goal": "阐明合成加成塑料不可生物降解（non-biodegradable）的化学键本质，全面权衡堆填（landfilling）、焚化（incineration，掌握 PVC 产生 HCl 与二噁英及碱液洗涤对策）、回收再造（recycling）与隔绝空气热裂解（pyrolysis）四大方案的利弊，圆满收官 Topic 7 并衔接 Topic 8！", "keyTerms": [{"en": "non-biodegradable", "zh": "不可生物降解的"}, {"en": "landfilling", "zh": "堆填（耗尽稀缺土地）"}, {"en": "incineration", "zh": "焚化（减容发电但排废气）"}, {"en": "hydrogen chloride & dioxins", "zh": "氯化氢与二噁英（焚烧 PVC）"}, {"en": "alkaline flue gas scrubber", "zh": "碱性烟道气洗涤器（脱 HCl）"}, {"en": "pyrolysis (in absence of air)", "zh": "隔绝空气高温热裂解"}], "boards": [{"id": "b4_1", "tag": "板书 1 · 不可生物降解困局与源头减废 (28.6)", "title": "成也结实、败也结实：加成塑料不可生物降解（Non-biodegradable）根源与 4R 原则", "html": "\n                <div class=\"b-quote\">\n                  <div class=\"b-quote-en\"><strong>Why Plastics Persist for Centuries（百年不烂的微观采分句）</strong>：Addition polymers are <strong>non-biodegradable</strong> — their chains contain very strong, non-polar <code>C—C</code> and <code>C—H</code> covalent bonds that <strong>cannot be broken down / decomposed by bacteria or microorganisms</strong>.</div>\n                  <div class=\"b-quote-zh\">🌊 <strong>四大连带生态灾害</strong>：迅速填满堆填区、海洋碎片令海龟鱼鸟误食窒息或缠绕致死、堵塞市区雨水渠引发水浸、露天不当焚烧释放黑烟毒气。</div>\n                </div>\n                <div class=\"board-grid-2\">\n                  <div class=\"b-box b-teal\">\n                    <div class=\"b-box-title\">① 环保管理 <code>4R</code> 黄金次序</div>\n                    <div class=\"b-eq\"><strong>Reduce</strong> ➔ <strong>Reuse</strong> ➔ <strong>Recycle</strong> ➔ <strong>Replace</strong></div>\n                    <ul class=\"b-points\">\n                      <li>减少使用即弃胶袋（如胶袋征费）、重用耐用容器、循环再造热塑性塑料、用纸张或竹木制品替代塑料。</li>\n                    </ul>\n                  </div>\n                  <div class=\"b-box b-amber\">\n                    <div class=\"b-box-title\">② 可降解塑料改良方向（衔接 Topic 8）</div>\n                    <ul class=\"b-points\">\n                      <li><strong>混入淀粉颗粒（<code>starch granules</code>）</strong>：土壤微生物吃掉淀粉后，大块聚乙烯崩解成细碎碎片加速风化降解。</li>\n                      <li><strong>可水解生物降解聚酯（如聚乳酸 <code>PLA</code>）</strong>：主链含酯键，可被微生物酶催化水解（详见 Book 3B Unit 33）。</li>\n                    </ul>\n                  </div>\n                </div>\n                ", "start": 0.25, "end": 93.614}, {"id": "b4_2", "tag": "板书 2 · 堆填 vs 焚化与 PVC 毒气治理 (28.7)", "title": "方案 ① 堆填（Landfilling）vs 方案 ② 焚化（Incineration）：PVC 双煞毒气与碱性洗涤器", "html": "\n                <div class=\"board-grid-2\">\n                  <div class=\"b-box b-amber\">\n                    <div class=\"b-box-title\">① 堆填法 <code>Landfilling</code>（掩埋卫生堆填区）</div>\n                    <ul class=\"b-points\">\n                      <li><strong>优点</strong>：操作简单、直接成本低、<strong>无需对混合塑料分类（<code>no sorting needed</code>）</strong>、不产生焚烧废气。</li>\n                      <li><strong>致命局限</strong>：<strong>迅速消耗宝贵且稀缺的堆填土地空间（<code>rapidly uses up scarce landfill space</code>）</strong>；塑料数百年不降解，且可能渗出增塑剂污染地下水。</li>\n                    </ul>\n                  </div>\n                  <div class=\"b-box b-rose\">\n                    <div class=\"b-box-title\">② 焚化法 <code>Incineration</code>（充足空气高温燃烧）</div>\n                    <ul class=\"b-points\">\n                      <li><strong>优点</strong>：<strong>大幅减少固体废物体积约 90%</strong>、燃烧热能可<strong>发电（<code>generates electricity</code>）</strong>、无需精细分类。</li>\n                      <li><strong>焚烧 <code>PVC</code> 必考双煞毒气</strong>：① 腐蚀性酸性气体 <strong><code>hydrogen chloride, HCl(g)</code></strong>（引发<strong>酸雨 <code>acid rain</code></strong>）；② 剧毒致癌有机污染物<strong>二噁英（<code>dioxins</code>）</strong>！</li>\n                    </ul>\n                  </div>\n                </div>\n                <div class=\"b-note\" style=\"margin-top:9px;\">\n                  🛡️ <strong>烟道气净化必考对策</strong>：令废气通过装有碱性浆液（如 <code>Ca(OH)₂</code>）的<strong>碱性烟道气洗涤器（<code>alkaline flue gas scrubber</code>）</strong>中和除去酸性 <code>HCl(g)</code>；维持超高温完全燃烧并用活性炭吸附 <code>dioxins</code>！\n                </div>\n                ", "start": 94.234, "end": 187.454}, {"id": "b4_3", "tag": "板书 3 · 回收再造 vs 热裂解及 Topic 7 大结局 (28.7)", "title": "方案 ③ 回收再造（Recycling）vs 方案 ④ 隔绝空气热裂解（Pyrolysis）与 Topic 7 全景闭环", "html": "\n                <table class=\"b-mini-table\" style=\"margin-bottom:9px;\">\n                  <thead>\n                    <tr>\n                      <th>处理方案与核心条件</th>\n                      <th>核心优点（Advantages）</th>\n                      <th>实际困难与局限（Limitations / Difficulties）</th>\n                    </tr>\n                  </thead>\n                  <tbody>\n                    <tr>\n                      <td><strong>③ 回收再造 <code>Recycling</code></strong><br>（清洁、熔融重塑热塑性塑料）</td>\n                      <td>• <strong>节约不可再生石油资源（<code>conserves non-renewable petroleum</code>）</strong><br>• 减少送往堆填区的垃圾量</td>\n                      <td>• <strong>分拣不同种类混合塑料极困难且昂贵（<code>difficult &amp; costly to sort/separate</code>）</strong><br>• 清洗油污成本高；反复熔融令塑料<strong>品质下降（<code>quality degrades</code>）</strong></td>\n                    </tr>\n                    <tr>\n                      <td><strong>④ 热裂解 <code>Pyrolysis</code></strong><br>（⚠️ <strong><code>in the absence of air</code> 隔绝空气</strong>高温加热）</td>\n                      <td>• 将聚合物大分子裂解回有用<strong>小分子烃燃料或单体原料</strong>，节约石油<br>• 对分类纯度要求较低；无氧不燃烧故<strong>不排二噁英</strong></td>\n                      <td>• 需持续维持 600–800 °C 高温，<strong>消耗大量能量（<code>high energy cost</code>）</strong><br>• 专用热裂解厂建设与运行成本高昂</td>\n                    </tr>\n                  </tbody>\n                </table>\n                <div class=\"b-scheme\" style=\"margin-bottom:0;\">\n<pre>🎓 Topic 7《Fossil Fuels and Carbon Compounds》(Units 25–28) 知识闭环大通关：\nUnit 25 原油分馏 (Naphtha) ══▶ Unit 26 同系物命名 &amp; 烷烃自由基取代 ══▶ Unit 27 裂化制烯烃 &amp; C=C 加成\n                                                                              ║\nBook 3B Topic 8 Unit 29（八大含卤素/氧/氮有机家族！） ◀══ Unit 28 加聚合成塑料 &amp; 隔绝空气热裂解回收 ◀╝</pre>\n                </div>\n                ", "start": 188.074, "end": 374.494}], "turns": [{"speaker": "teacher", "role": "concept", "stepTag": "🌍 双刃剑困局 · 为什么塑料几百年都不腐烂？", "boardId": "b4_1", "displayHtml": "欢迎来到第 4 讲收官课！请看<strong>第 1 张板书</strong>：加成聚合物主链全为极牢固的非极性 <code>C—C</code> 与 <code>C—H</code> 键，自然界微生物缺乏分解它们的酶，故属<strong>不可生物降解（<code>non-biodegradable</code> — <code>cannot be decomposed by bacteria or microorganisms</code>）</strong>！废塑料留存数百年，塞满堆填区、堵塞雨水渠，更令海洋生物误食窒息。", "start": 0.25, "end": 48.13}, {"speaker": "teacher", "role": "concept", "stepTag": "♻️ 源头破局 · 四个 R 原则与淀粉混溶塑料", "boardId": "b4_1", "displayHtml": "源头管理遵循板书左框的 <strong><code>4R</code> 原则</strong>：<code>Reduce</code>（如胶袋征费）➔ <code>Reuse</code> ➔ <code>Recycle</code> ➔ <code>Replace</code>。右框展示两大改良方向：① 在聚乙烯中混入<strong>淀粉颗粒（<code>starch granules</code>）</strong>，微生物消化淀粉后使大块塑料崩解成细碎片段加速降解；② 研发主链含酯键的可水解聚酯（如 <code>PLA</code>，Topic 8 Unit 33 详学）。", "start": 48.47, "end": 93.614}, {"speaker": "teacher", "role": "concept", "stepTag": "⛰️ 方案一与二 · 堆填耗尽土地 vs 焚化减容发电", "boardId": "b4_2", "displayHtml": "切换到<strong>第 2 张板书</strong>对比前两大末端方案：① <strong>堆填法（<code>landfilling</code>）</strong>——简单低廉、无需分类，但会<strong>迅速耗尽稀缺的堆填土地空间（<code>rapidly uses up scarce landfill space</code>）</strong>！② <strong>焚化法（<code>incineration</code>，充足空气中高温燃烧）</strong>——能<strong>减少约 90% 废物体积</strong>并利用热能<strong>发电（<code>generates electricity</code>）</strong>，减轻土地压力。", "start": 94.234, "end": 141.778}, {"speaker": "teacher", "role": "trap", "stepTag": "☠️ 焚化高危考点 · 烧 PVC 双煞毒气与碱液洗涤塔", "boardId": "b4_2", "displayHtml": "⚠️ <strong>焚化头号考点</strong>：焚烧含氯的 <code>PVC</code> 会释放两大毒物——① 腐蚀性酸性气体<strong>氯化氢（<code>hydrogen chloride, HCl(g)</code>，导致酸雨 <code>acid rain</code>）</strong>；② 剧毒致癌有机污染物<strong>二噁英（<code>dioxins</code>）</strong>！<strong>必考脱酸对策</strong>：令废气通过装有氢氧化钙等碱液的<strong>碱性烟道气洗涤器（<code>alkaline flue gas scrubber</code>）</strong>中和除去 <code>HCl(g)</code>！", "start": 142.118, "end": 187.454}, {"speaker": "teacher", "role": "concept", "stepTag": "🔄 方案三评估 · 回收再造省石油与三大现实难关", "boardId": "b4_3", "displayHtml": "切换到<strong>第 3 张板书</strong>看方案 ③ <strong>回收再造（<code>recycling</code>）</strong>：核心优点是<strong>节约不可再生的石油资源（<code>conserves non-renewable petroleum</code>）</strong>；但必背<strong>三大实际困难（<code>practical difficulties</code>）</strong>：① <strong>分拣不同种类混合塑料极困难且昂贵（<code>difficult &amp; costly to sort/separate</code>）</strong>；② 收集与清洗油污塑料成本高；③ 反复受热熔融使聚合物断链、<strong>品质下降（<code>quality degrades</code>）</strong>。", "start": 188.074, "end": 227.674}, {"speaker": "teacher", "role": "trap", "stepTag": "🔥 方案四辨析 · 热裂解 Pyrolysis 漏写隔绝空气零分！", "boardId": "b4_3", "displayHtml": "再看方案 ④ <strong>热裂解（<code>pyrolysis</code>）</strong>——严禁与焚化混淆！定义必写黄金条件：在<strong>隔绝空气（<code>in the absence of air</code>，漏写必扣分！）</strong>下高温加热，将大分子聚合物裂解回有用的<strong>小分子碳氢燃料或单体原料</strong>！优点是节约石油、无需极严苛分类且<strong>无氧燃烧不排二噁英</strong>；局限是<strong>极耗能量（<code>high energy cost</code>）</strong>且设备昂贵。", "start": 228.014, "end": 281.246}, {"speaker": "teacher", "role": "example", "stepTag": "🎯 考场决策术 · 看题干场景精准匹配四大方案", "boardId": "b4_3", "displayHtml": "考场决策题黄金法则——<strong>依场景权衡利弊</strong>：土地极度稀缺且垃圾混杂 ➔ 选<strong>现代焚化发电 + <code>alkaline scrubber</code></strong> 胜过堆填；干净单一材质的热塑性塑料边角料 ➔ 首选<strong>机械回收再造（<code>recycling</code>）</strong>；混合碳氢废塑料欲回收化工原料或燃料油 ➔ 首选<strong>隔绝空气热裂解（<code>pyrolysis in the absence of air</code>）</strong>！", "start": 281.586, "end": 324.81}, {"speaker": "teacher", "role": "summary", "stepTag": "🎓 Topic 7 大结局 · 圆满闭环迈向 Topic 8 八大家族", "boardId": "b4_3", "displayHtml": "请看板书底部的<strong>全景闭环图</strong>！至此，Book 3A · Topic 7 四个单元已彻底贯通：<code>Unit 25</code> 原油分馏出石脑油 ➔ <code>Unit 26</code> 命名与烷烃取代 ➔ <code>Unit 27</code> 裂化制烯烃与加成反应 ➔ <code>Unit 28</code> 加聚合成七大塑料并经热裂解回归小分子烃！祝贺通关 Topic 7——下一站，让我们迈入 Book 3B · Topic 8 <strong>Unit 29</strong>，解锁八大含卤、含氧、含氮有机家族！", "start": 325.15, "end": 374.494}], "quickChecks": [{"q": "焚化（incineration）含有聚氯乙烯（PVC）的混合塑料废物时，会产生哪种导致酸雨的气体及哪种剧毒有机污染物？该酸性气体应如何除去？", "options": ["A. 二氧化硫（SO₂）与一氧化碳；通过水洗除去", "B. 氯化氢（HCl）与二噁英（dioxins）；令烟道气通过碱性洗涤器（alkaline scrubber）中和除去 HCl", "C. 氨气（NH₃）与苯；通过浓硫酸吸收塔除去", "D. 氯气（Cl₂）与甲烷；通过冷却凝结除去"], "ans": 1, "exp": "PVC 含氯元素（—CH₂—CHCl—），高温焚化时释放酸性腐蚀气体氯化氢 HCl(g)（导致酸雨）及剧毒致癌物二噁英（dioxins）；工业上使用装有碱性浆液（如氢氧化钙）的碱性烟道气洗涤器（alkaline flue gas scrubber）中和脱除 HCl。"}, {"q": "下列关于废塑料“热裂解法（pyrolysis）”的说法，哪一项是正确的？", "options": ["A. 必须在充足氧气中高温燃烧，将废塑料完全转化为二氧化碳和水来发电", "B. 必须在隔绝空气（in the absence of air）下高温加热，将大分子聚合物裂解为有用的小分子碳氢化合物，从而节约石油资源", "C. 可以在室温下依靠土壤细菌的酶自动完成分解，完全不消耗能量", "D. 热裂解前必须像机械回收一样把每一片塑料按颜色和纯度做到 100% 精细分拣"], "ans": 1, "exp": "Pyrolysis（热裂解）的核心条件是在隔绝空气（in the absence of air）下高温加热，使塑料聚合物链断裂变回有用的小分子烃类燃料或单体原料；它无需像机械回收那样严苛分拣，也不发生有氧燃烧排放二噁英，主要局限是耗能高。"}], "duration": 375.0, "audioFile": "audio/04_28.6-28.7_塑料不可生物降解困局与四大废物管理方案评估.mp3", "fullStart": 1090.72, "fullEnd": 1465.66}]};
+
+    (function () {
+      const data = window.COURSE_DATA;
+      const episodes = data.episodes;
+      const STORAGE_KEY = 'u28_audio_preview_v1';
+
+      let saved = {};
+      try { saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || '{}'); } catch (e) {}
+
+      const state = {
+        currentEpIdx: typeof saved.currentEpIdx === 'number' && saved.currentEpIdx < episodes.length ? saved.currentEpIdx : 0,
+        doneEps: saved.doneEps || {},
+        autoScroll: true,
+        autoPlayNext: true,
+        speed: saved.speed || 1.0
+      };
+
+      const audio = document.getElementById('classroom-audio');
+      const epStrip = document.getElementById('ep-strip');
+      const epHero = document.getElementById('ep-hero');
+      const boardsContainer = document.getElementById('boards-container');
+      const transcriptList = document.getElementById('transcript-list');
+      const quizContainer = document.getElementById('quiz-container');
+
+      const playBtn = document.getElementById('play-btn');
+      const seekSlider = document.getElementById('seek-slider');
+      const curTimeEl = document.getElementById('cur-time');
+      const durTimeEl = document.getElementById('dur-time');
+      const dockEpLabel = document.getElementById('dock-ep-label');
+      const speedSelect = document.getElementById('speed-select');
+      const autoScrollBtn = document.getElementById('auto-scroll-toggle');
+      const autoplayBtn = document.getElementById('autoplay-btn');
+      const downloadMerged = document.getElementById('download-merged-link');
+      const downloadEp = document.getElementById('download-ep-link');
+      const totalDurBadge = document.getElementById('total-dur-badge');
+      const companionLink = document.getElementById('companion-site-link');
+      const handoutMdLink = document.getElementById('handout-md-link');
+
+      if (/\.github\.io$/i.test(window.location.hostname)) {
+        companionLink.href = 'https://kenlin666bot.github.io/mastering-organic-chem/';
+        handoutMdLink.href = 'https://github.com/KenLin666Bot/unit28-audio-preview/blob/main/Unit28_%E5%8F%8C%E8%AF%AD%E8%AF%BE%E5%A0%82%E8%AE%B2%E4%B9%89%E4%B8%8E%E9%80%90%E5%AD%97%E7%A8%BF.md';
+        document.querySelectorAll('.unit-jump-link').forEach(a => {
+          const gh = a.getAttribute('data-gh');
+          if (gh) a.href = gh;
+        });
+      }
+
+      let isDraggingSlider = false;
+      let activeTurnIdx = -1;
+      let activeBoardId = null;
+
+      function fmtTime(sec) {
+        if (!isFinite(sec) || sec < 0) sec = 0;
+        const m = Math.floor(sec / 60);
+        const s = Math.floor(sec % 60);
+        return String(m).padStart(2, '0') + ':' + String(s).padStart(2, '0');
+      }
+
+      function saveState() {
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify({
+            currentEpIdx: state.currentEpIdx,
+            doneEps: state.doneEps,
+            speed: state.speed
+          }));
+        } catch (e) {}
+      }
+
+      downloadMerged.href = encodeURI(data.mergedAudioFile);
+      totalDurBadge.textContent = fmtTime(data.totalDuration);
+      speedSelect.value = String(state.speed);
+
+      function renderEpisodeStrip() {
+        epStrip.innerHTML = episodes.map((ep, idx) => {
+          const isDone = !!state.doneEps[ep.id];
+          const activeCls = idx === state.currentEpIdx ? 'active' : '';
+          return `
+            <button class="ep-tab ${activeCls}" data-ep-idx="${idx}">
+              <div class="ep-tab-top">
+                <span>${ep.epNum} · ${ep.code}</span>
+                ${isDone ? '<span class="ep-done-dot">✓ 已学完</span>' : ''}
+              </div>
+              <div class="ep-tab-title">${ep.titleZh}</div>
+              <div class="ep-tab-meta">
+                <span>🎧 约 ${fmtTime(ep.duration)}</span>
+                <span>${ep.boards.length} 张板书</span>
+              </div>
+            </button>
+          `;
+        }).join('');
+
+        epStrip.querySelectorAll('.ep-tab').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const idx = Number(btn.getAttribute('data-ep-idx'));
+            loadEpisode(idx, true);
+          });
+        });
+      }
+
+      function loadEpisode(idx, autoPlay) {
+        state.currentEpIdx = idx;
+        activeTurnIdx = -1;
+        activeBoardId = null;
+        saveState();
+        renderEpisodeStrip();
+
+        const ep = episodes[idx];
+
+        epHero.innerHTML = `
+          <div class="ep-hero-kicker">
+            <span>📚 Mastering Chemistry · Unit 28</span>
+            <span>|</span>
+            <span>${ep.epNum}（课本 ${ep.code}）</span>
+          </div>
+          <h1 class="ep-hero-title">${ep.titleZh}</h1>
+          <div class="ep-hero-en">${ep.titleEn}</div>
+          <div class="ep-goal-box">🎯 <strong>本讲预习目标：</strong>${ep.goal}</div>
+          <div class="term-row">
+            ${ep.keyTerms.map(t => `<span class="term-chip"><b>${t.en}</b> · ${t.zh}</span>`).join('')}
+          </div>
+        `;
+
+        boardsContainer.innerHTML = ep.boards.map((b, bIdx) => `
+          <section class="board-card ${bIdx === 0 ? 'is-active-board' : ''}" id="card-${b.id}" data-board-id="${b.id}">
+            <div class="board-head">
+              <div class="board-tag-wrap">
+                <span class="board-tag">${b.tag}</span>
+                <span class="live-pill">● 正在讲授此板书</span>
+              </div>
+              <button class="board-jump-btn" data-jump="${b.start}">▶ 跳到此板书 (${fmtTime(b.start)})</button>
+            </div>
+            <h2 class="board-title">${b.title}</h2>
+            <div class="board-body">${b.html}</div>
+          </section>
+        `).join('');
+
+        boardsContainer.querySelectorAll('.board-jump-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const t = parseFloat(btn.getAttribute('data-jump') || '0');
+            seekAndPlay(t);
+          });
+        });
+
+        transcriptList.innerHTML = ep.turns.map((t, tIdx) => `
+          <div class="turn-bubble role-${t.role || 'concept'}" id="turn-${tIdx}" data-turn-idx="${tIdx}" data-start="${t.start}">
+            <div class="turn-meta">
+              <span class="speaker-name">${t.stepTag}</span>
+              <span class="turn-time">${fmtTime(t.start)}</span>
+            </div>
+            <div class="turn-text">${t.displayHtml}</div>
+          </div>
+        `).join('');
+
+        transcriptList.querySelectorAll('.turn-bubble').forEach(div => {
+          div.addEventListener('click', () => {
+            const t = parseFloat(div.getAttribute('data-start') || '0');
+            seekAndPlay(t);
+          });
+        });
+
+        quizContainer.innerHTML = `
+          <h3 class="quiz-head">⚡ 听完测一测：30 秒预习快问快答</h3>
+          ${ep.quickChecks.map((q, qIdx) => `
+            <div class="q-item" data-q-idx="${qIdx}">
+              <div class="q-stem">${qIdx + 1}. ${q.q}</div>
+              <div class="q-opts">
+                ${q.options.map((opt, oIdx) => `
+                  <button class="q-opt-btn" data-q="${qIdx}" data-o="${oIdx}">${opt}</button>
+                `).join('')}
+              </div>
+              <div class="q-exp" id="q-exp-${qIdx}">💡 <strong>解析：</strong>${q.exp}</div>
+            </div>
+          `).join('')}
+        `;
+
+        quizContainer.querySelectorAll('.q-opt-btn').forEach(btn => {
+          btn.addEventListener('click', () => {
+            const qIdx = Number(btn.getAttribute('data-q'));
+            const oIdx = Number(btn.getAttribute('data-o'));
+            const qObj = ep.quickChecks[qIdx];
+            const parent = btn.closest('.q-item');
+            parent.querySelectorAll('.q-opt-btn').forEach((b, i) => {
+              b.classList.remove('correct', 'wrong');
+              if (i === qObj.ans) b.classList.add('correct');
+            });
+            if (oIdx !== qObj.ans) btn.classList.add('wrong');
+            document.getElementById(`q-exp-${qIdx}`).style.display = 'block';
+          });
+        });
+
+        audio.src = encodeURI(ep.audioFile);
+        audio.playbackRate = state.speed;
+        downloadEp.href = encodeURI(ep.audioFile);
+        dockEpLabel.textContent = `${ep.epNum} (${ep.code}) · ${ep.titleZh}`;
+        seekSlider.max = String(ep.duration);
+        seekSlider.value = '0';
+        curTimeEl.textContent = '00:00';
+        durTimeEl.textContent = fmtTime(ep.duration);
+
+        if (autoPlay) {
+          audio.play().catch(() => {});
+        } else {
+          playBtn.textContent = '▶ 开始听课';
+        }
+      }
+
+      function seekAndPlay(targetSec) {
+        if (audio.readyState >= 1) {
+          audio.currentTime = targetSec;
+          audio.play().catch(() => {});
+        } else {
+          audio.addEventListener('loadedmetadata', function onMeta() {
+            audio.removeEventListener('loadedmetadata', onMeta);
+            audio.currentTime = targetSec;
+            audio.play().catch(() => {});
+          });
+          audio.load();
+        }
+      }
+
+      function syncClassroomHighlight(t) {
+        const ep = episodes[state.currentEpIdx];
+        if (!ep) return;
+
+        let foundIdx = -1;
+        for (let i = 0; i < ep.turns.length; i++) {
+          const turn = ep.turns[i];
+          const nextStart = (i + 1 < ep.turns.length) ? ep.turns[i + 1].start : ep.duration + 1;
+          if (t >= turn.start - 0.08 && t < nextStart) {
+            foundIdx = i;
+            break;
+          }
+        }
+
+        if (foundIdx !== -1 && foundIdx !== activeTurnIdx) {
+          activeTurnIdx = foundIdx;
+          transcriptList.querySelectorAll('.turn-bubble').forEach((el, i) => {
+            el.classList.toggle('active-turn', i === foundIdx);
+          });
+          const activeTurnEl = document.getElementById(`turn-${foundIdx}`);
+          if (activeTurnEl && state.autoScroll) {
+            activeTurnEl.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          }
+
+          const targetBoardId = ep.turns[foundIdx].boardId;
+          if (targetBoardId && targetBoardId !== activeBoardId) {
+            const prevBoard = activeBoardId;
+            activeBoardId = targetBoardId;
+            boardsContainer.querySelectorAll('.board-card').forEach(card => {
+              card.classList.toggle('is-active-board', card.getAttribute('data-board-id') === targetBoardId);
+            });
+            if (prevBoard !== null && state.autoScroll) {
+              const cardEl = document.getElementById(`card-${targetBoardId}`);
+              if (cardEl) {
+                const y = cardEl.getBoundingClientRect().top + window.scrollY - 82;
+                window.scrollTo({ top: y, behavior: 'smooth' });
+              }
+            }
+          }
+        }
+      }
+
+      audio.addEventListener('timeupdate', () => {
+        const t = audio.currentTime;
+        if (!isDraggingSlider) {
+          seekSlider.value = String(t);
+        }
+        curTimeEl.textContent = fmtTime(t);
+        syncClassroomHighlight(t);
+      });
+
+      audio.addEventListener('loadedmetadata', () => {
+        if (audio.duration && isFinite(audio.duration)) {
+          seekSlider.max = String(audio.duration);
+          durTimeEl.textContent = fmtTime(audio.duration);
+        }
+        audio.playbackRate = state.speed;
+      });
+
+      audio.addEventListener('play', () => {
+        playBtn.textContent = '⏸ 暂停';
+      });
+
+      audio.addEventListener('pause', () => {
+        playBtn.textContent = '▶ 继续听课';
+      });
+
+      audio.addEventListener('ended', () => {
+        const ep = episodes[state.currentEpIdx];
+        state.doneEps[ep.id] = true;
+        saveState();
+        renderEpisodeStrip();
+        if (state.autoPlayNext && state.currentEpIdx + 1 < episodes.length) {
+          loadEpisode(state.currentEpIdx + 1, true);
+        } else {
+          playBtn.textContent = '↺ 重听本讲';
+        }
+      });
+
+      playBtn.addEventListener('click', () => {
+        if (audio.paused) {
+          audio.play().catch(() => {});
+        } else {
+          audio.pause();
+        }
+      });
+
+      document.getElementById('rew-btn').addEventListener('click', () => {
+        audio.currentTime = Math.max(0, audio.currentTime - 10);
+      });
+
+      document.getElementById('fwd-btn').addEventListener('click', () => {
+        audio.currentTime = Math.min(audio.duration || 9999, audio.currentTime + 10);
+      });
+
+      document.getElementById('prev-ep-btn').addEventListener('click', () => {
+        if (state.currentEpIdx > 0) loadEpisode(state.currentEpIdx - 1, !audio.paused);
+      });
+
+      document.getElementById('next-ep-btn').addEventListener('click', () => {
+        if (state.currentEpIdx + 1 < episodes.length) loadEpisode(state.currentEpIdx + 1, !audio.paused);
+      });
+
+      seekSlider.addEventListener('input', () => {
+        isDraggingSlider = true;
+        curTimeEl.textContent = fmtTime(parseFloat(seekSlider.value));
+      });
+
+      seekSlider.addEventListener('change', () => {
+        audio.currentTime = parseFloat(seekSlider.value);
+        isDraggingSlider = false;
+      });
+
+      speedSelect.addEventListener('change', () => {
+        state.speed = parseFloat(speedSelect.value);
+        audio.playbackRate = state.speed;
+        saveState();
+      });
+
+      autoScrollBtn.addEventListener('click', () => {
+        state.autoScroll = !state.autoScroll;
+        autoScrollBtn.classList.toggle('on', state.autoScroll);
+        autoScrollBtn.textContent = state.autoScroll ? '🎯 自动跟随：开' : '🎯 自动跟随：关';
+      });
+
+      autoplayBtn.addEventListener('click', () => {
+        state.autoPlayNext = !state.autoPlayNext;
+        autoplayBtn.textContent = state.autoPlayNext ? '🔁 连播：开' : '🔁 连播：关';
+      });
+
+      document.addEventListener('keydown', (e) => {
+        if (['INPUT', 'SELECT', 'TEXTAREA'].includes(e.target.tagName)) return;
+        if (e.code === 'Space') {
+          e.preventDefault();
+          playBtn.click();
+        } else if (e.code === 'ArrowLeft') {
+          audio.currentTime = Math.max(0, audio.currentTime - 5);
+        } else if (e.code === 'ArrowRight') {
+          audio.currentTime = Math.min(audio.duration || 9999, audio.currentTime + 5);
+        }
+      });
+
+      loadEpisode(state.currentEpIdx, false);
+    })();
+  </script>
+</body>
+</html>
